@@ -52,7 +52,7 @@ const ScrollingWords: React.FC<ScrollingWordsProps> = ({ pageProps, scrollDirect
                         href={prop.url || ''}
                         style={{ margin: '0 20px' }}
                         className="font-dela-gothic-one text-semi-white hover:text-white transition text-xl p-4">
-                        {prop.url}
+                        {prop.text}
                     </Link>
                 ))}
                 {/* Duplicate for seamless scrolling */}
