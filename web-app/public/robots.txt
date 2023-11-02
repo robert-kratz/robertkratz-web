@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://rjks.us
+Host: https://www.rjks.us
 
 # Sitemaps
-Sitemap: https://rjks.us/sitemap.xml
+Sitemap: https://www.rjks.us/sitemap.xml

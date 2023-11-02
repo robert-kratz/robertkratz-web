@@ -5,6 +5,9 @@ const nextConfig = {
         locales: ['en', 'de'],
         defaultLocale: 'en',
     },
+    images: {
+        domains: ['www.rjks.us', 'rjks.us'],
+    },
     publicRuntimeConfig: {
         RECAPTCHA_SITE_KEY: process.env.RECAPTCHA_SITE_KEY || '',
         GA_TAG: process.env.GA_TAG || '',
