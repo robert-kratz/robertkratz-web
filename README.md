@@ -4,6 +4,12 @@ This is the New Portfolio Website of Robert Julian Kratz (rjks.us)
 
 ## Installation
 
+Clone the repository
+
+```bash
+git clone https://github.com/robert-kratz/robertkratz-web.git
+```
+
 ```bash
 cd web-app
 ```
