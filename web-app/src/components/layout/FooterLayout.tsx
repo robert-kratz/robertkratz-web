@@ -29,11 +29,6 @@ export function FooterLayout() {
                     className="text-semi-white opacity-50 text-xs font-light font-Inter hover:underline cursor-pointer">
                     {t('cookieConsent').reset}
                 </a>
-                <div>
-                    <p className="text-semi-white opacity-50 text-sm font-light font-Inter">
-                        rjks.us &copy; {new Date().getFullYear()}
-                    </p>
-                </div>
                 <Link
                     href={'https://undraw.co/license'}
                     target="_blank"
@@ -41,6 +36,20 @@ export function FooterLayout() {
                     className="text-semi-white opacity-50 text-xs font-light font-Inter hover:underline">
                     Thanks to undraw.co for the illustrations
                 </Link>
+            </div>
+            <div className="flex justify-between items-center">
+                <div>
+                    <p className="text-semi-white opacity-50 text-sm font-light font-Inter">
+                        rjks.us &copy; {new Date().getFullYear()}
+                    </p>
+                    <Link
+                        href={'https://github.com/robert-kratz/robertkratz-web/pulls'}
+                        target="_blank"
+                        rel="follow"
+                        className="text-semi-white opacity-50 text-xs font-light font-Inter hover:underline cursor-pointer">
+                        Found a bug? Report it here
+                    </Link>
+                </div>
             </div>
         </footer>
     );
