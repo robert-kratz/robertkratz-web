@@ -4,18 +4,15 @@ import ActionButton from '../components/button/ActionButton';
 import LimitedWidthArea from '@/components/layout/LimitedWidthArea';
 import ScrollingWords from '@/components/HorizontalLinkSlider';
 import { useTranslation } from '@/components/hooks/useTranslation';
-import { Metadata } from 'next';
 import AnimateOnScroll from '@/components/hooks/AnimationOnScroll';
 import TranslationElement from '@/components/utils/TranslationElement';
 import Link from 'next/link';
-import { useEffect, useRef, useState } from 'react';
 import ParallaxMouseMovement from '@/components/utils/ParallaxMouseMovement';
-import { PageMetaDataProps } from '@/components/utils/PageMetaData';
 
 export default function Home() {
     const { t } = useTranslation();
 
-    const metadata = t('pages.title').index;
+    const metadata = t('pages.title')?.index;
 
     return (
         <PageLayout hideMenuOnTop={true} metadata={metadata}>
@@ -217,3 +214,11 @@ const ServiceCard = ({ title, image, children, imageAlt, color, href, buttonText
         </AnimateOnScroll>
     );
 };
+
+export function getServerSideProps({ locale }: any) {
+    return {
+        props: {
+            ...(locale && { locale }),
+        },
+    };
+}

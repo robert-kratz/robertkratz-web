@@ -3,7 +3,7 @@ import React, { useRef, useEffect } from 'react';
 
 type PageProp = {
     text: string;
-    link: string;
+    url: string;
 };
 
 type ScrollingWordsProps = {
@@ -49,17 +49,17 @@ const ScrollingWords: React.FC<ScrollingWordsProps> = ({ pageProps, scrollDirect
                     <Link
                         key={index}
                         target={openInNewTab ? '_blank' : '_self'}
-                        href={prop.url}
+                        href={prop.url || ''}
                         style={{ margin: '0 20px' }}
                         className="font-dela-gothic-one text-semi-white hover:text-white transition text-xl p-4">
-                        {prop.text}
+                        {prop.url}
                     </Link>
                 ))}
                 {/* Duplicate for seamless scrolling */}
                 {pageProps.map((prop, index) => (
                     <Link
                         key={index}
-                        href={prop.url}
+                        href={prop?.url || ''}
                         target={openInNewTab ? '_blank' : '_self'}
                         style={{ margin: '0 20px' }}
                         className="font-dela-gothic-one text-semi-white hover:text-white transition text-xl p-4">
