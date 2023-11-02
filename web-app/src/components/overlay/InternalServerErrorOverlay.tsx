@@ -1,7 +1,5 @@
-import ActionButton from '@/components/button/ActionButton';
 import LanguageChangeButton from '@/components/button/LanguageChangeButton';
 import AnimateOnScroll from '@/components/hooks/AnimationOnScroll';
-import { useTranslation } from '@/components/hooks/useTranslation';
 import LimitedWidthArea from '@/components/layout/LimitedWidthArea';
 import ParallaxMouseMovement from '@/components/utils/ParallaxMouseMovement';
 import TranslationElement from '@/components/utils/TranslationElement';

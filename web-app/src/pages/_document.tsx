@@ -1,8 +1,5 @@
 import getConfig from 'next/config';
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
-import { useEffect } from 'react';
-
-import { getUserConsent } from '../../consentManager';
 
 const { publicRuntimeConfig } = getConfig();
 

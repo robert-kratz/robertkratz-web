@@ -1,7 +1,6 @@
 import getConfig from 'next/config';
-import Head from 'next/head';
 import { useEffect, useState } from 'react';
-import { getUserConsent, setUserConsent, showCookieDialog } from '../../../consentManager';
+import { getUserConsent, setUserConsent } from '../../../consentManager';
 import ActionButton from '../button/ActionButton';
 import { useTranslation } from '../hooks/useTranslation';
 import TranslationElement from '../utils/TranslationElement';

@@ -1,5 +1,4 @@
 import PageLayout from '@/components/layout/PageLayout';
-import LandingSection from '@/components/structure/LandingSection';
 
 import fs from 'fs';
 import ReactMarkdown from 'react-markdown';

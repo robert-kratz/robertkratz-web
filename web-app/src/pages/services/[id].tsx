@@ -3,7 +3,6 @@ import AnimateOnScroll from '@/components/hooks/AnimationOnScroll';
 import { useTranslation } from '@/components/hooks/useTranslation';
 import LimitedWidthArea from '@/components/layout/LimitedWidthArea';
 import PageLayout from '@/components/layout/PageLayout';
-import PageNotFoundOverlay from '@/components/overlay/PageNotFoundOverlay';
 import ContentSection from '@/components/structure/ContentSection';
 import LandingSection from '@/components/structure/LandingSection';
 import ParallaxMouseMovement from '@/components/utils/ParallaxMouseMovement';

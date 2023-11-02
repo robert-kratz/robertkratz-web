@@ -1,8 +1,7 @@
-import { data } from 'autoprefixer';
 import Link from 'next/link';
 import { useTranslation } from '../hooks/useTranslation';
 
-import { getUserConsent, setUserConsent, showCookieDialog } from '../../../consentManager';
+import { setUserConsent } from '../../../consentManager';
 import { useRouter } from 'next/router';
 
 export function FooterLayout() {

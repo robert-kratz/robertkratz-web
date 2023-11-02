@@ -1,11 +1,8 @@
-import { Metadata } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
 import BackToTopButton from '../button/BackToTopButton';
 import LanguageChangeButton from '../button/LanguageChangeButton';
 import CookieDialog from '../dialog/CookieDialog';
 import PageHeader from '../header/PageHeader';
-import PageMetaData, { PageMetaDataProps } from '../utils/PageMetaData';
+import PageMetaData from '../utils/PageMetaData';
 import { FooterLayout } from './FooterLayout';
 
 type PageLayoutProps = {
