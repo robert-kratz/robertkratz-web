@@ -1,0 +1,600 @@
+{
+    "home.title": "Robert Julian Kratz",
+    "home.subheading": "Your Expert for Tailor Made<br/> Software Development & Digital Transformation",
+    "home.button.1.text": "My Services",
+    "home.button.1.href": "#service",
+    "home.button.2.text": "Hire Me",
+    "home.button.2.href": "/contact",
+    "home.vision": "++Simplify++ your ##business processes##, increase efficiency and develop your full --potential--",
+    "menu.contact": "Contact",
+    "home.content": {
+        "title": "Your Expert for Tailor Made Software Development & Digital Transformation",
+        "subtitle": "I am Robert Julian Kratz, your expert for customized software development & digital transformation. I will help you simplify your business processes, increase your efficiency and develop your full potential.",
+        "image.url": "/images/illustrations/home-illustration.svg",
+        "image.imageAlt": "Software Development & Digital Transformation"
+    },
+    "home.socials": [
+        {
+            "alt": "LinkedIn",
+            "icon": "/icons/linkedin-icon.svg",
+            "url": "https://www.linkedin.com/in/robert-julian-kratz-155829225/"
+        },
+        {
+            "alt": "GitHub",
+            "icon": "/icons/github-icon.svg",
+            "url": "https://github.com/robert-kratz"
+        }
+    ],
+    "contact.page": {
+        "title": "Contact Me",
+        "subtitle": "Please feel free to contact me via email, LinkedIn or the contact form. Get your quote today! Contact via email",
+        "landing-button.text": "Contact via E-Mail",
+        "landing.button.url": "mailto:contact@rjks.us",
+        "form": {
+            "title": "Contact Me",
+            "subtitle": "I will get back to you within 24 hours",
+            "privacy": "I have read and accept the [data protection declaration](/privacy-policy).",
+            "firstName": "Firstname",
+            "lastName": "Lastname",
+            "email": "E-Mail",
+            "phone": "Phone",
+            "message": "Message",
+            "submit.text": "Send",
+            "error": {
+                "firstName.required": "Please enter your first name",
+                "lastName.required": "Please enter your last name",
+                "email.required": "Please enter your email address",
+                "email.valid": "Please enter a valid email address",
+                "phone.valid": "Please enter a valid phone number",
+                "message.required": "Please enter a message",
+                "message.min": "Please enter at least 1 characters",
+                "message.max": "Please enter at most 4096 characters",
+                "privacy.required": "Please accept the privacy policy",
+                "recaptcha.required": "Please confirm that you are not a robot",
+                "recaptcha.error": "An error occurred. Please try again later",
+                "recaptcha.notready": "The captcha is not ready yet. Please try again later",
+                "recaptcha.expired": "The captcha has expired. Please try again later",
+                "submit.error": "An error occurred. Please try again later"
+            }
+        },
+        "social": [
+            {
+                "alt": "LinkedIn",
+                "icon": "/icons/linkedin-icon.svg",
+                "url": "https://www.linkedin.com/in/robert-julian-kratz-155829225/"
+            }
+        ],
+        "success": {
+            "title": "Thank You!",
+            "subtitle": "Your message has been sent successfully. I will get back to you within 24 hours.",
+            "landing-button-text": "Back to Home",
+            "landing-button-href": "/",
+            "landing-hero-image.url": "/images/illustrations/contact-sucess-illustration.svg",
+            "landing-hero-image.imageAlt": "Successfully Contacted"
+        }
+    },
+    "cookieConsent": {
+        "title": "Cookie Notice",
+        "message": "This website uses cookies to offer you the best possible functionality. You can find more information in the [data protection declaration](/privacy-policy).",
+        "decline": "Deny",
+        "accept": "Accept",
+        "reset": "Reset cookie settings"
+    },
+    "footer.content": {
+        "links": {
+            "title": "Links",
+            "items": [
+                {
+                    "text": "Contact",
+                    "url": "/"
+                },
+                {
+                    "text": "Webdevelopment",
+                    "url": "/services/web-development"
+                },
+                {
+                    "text": "Mobile App Development",
+                    "url": "/services/app-development#mobile-apps"
+                },
+                {
+                    "text": "Desktop App Development",
+                    "url": "/services/app-development#desktop-apps"
+                },
+                {
+                    "text": "E-Commerce",
+                    "url": "/services/e-commerce"
+                },
+                {
+                    "text": "SEO",
+                    "url": "/services/seo"
+                }
+            ]
+        },
+        "social": {
+            "title": "Social",
+            "items": [
+                {
+                    "text": "LinkedIn",
+                    "url": "https://www.linkedin.com/in/robert-julian-kratz-155829225/"
+                },
+                {
+                    "text": "GitHub",
+                    "url": "https://github.com/robert-kratz"
+                },
+                {
+                    "text": "E-Mail",
+                    "url": "mailto:contact@rjks.us"
+                },
+                {
+                    "text": "Henry Hermann",
+                    "url": "https://herrmann.page"
+                }
+            ]
+        },
+        "company": {
+            "title": "Legal",
+            "items": [
+                {
+                    "text": "Impressum",
+                    "url": "/legal-notice"
+                },
+                {
+                    "text": "Datenschutz",
+                    "url": "/privacy-policy"
+                }
+            ]
+        }
+    },
+    "service.linkslider": [
+        { "text": "Webdevelopment", "url": "/services/web-development" },
+        { "text": "IOS App Development", "url": "/services/app-development#mobile-app-development" },
+        { "text": "E-Commerce", "url": "/services/e-commerce" },
+        { "text": "Android App Development", "url": "/services/app-development#mobile-app-development" },
+        { "text": "SEO", "url": "/services/seo" },
+        { "text": "Webscraping", "url": "/services/database-and-infrastructure#webscraping" },
+        { "text": "Desktop App Development", "url": "/services/app-development#desktop-app-development" },
+        { "text": "Website analysis", "url": "/services/seo#webanalysis" },
+        { "text": "User analysis", "url": "/services/e-commerce#user-analysis" }
+    ],
+    "service.tools": [
+        { "text": "Next.js", "url": "https://nextjs.org" },
+        { "text": "Amazon Web Services", "url": "https://aws.amazon.com/" },
+        { "text": "Stripe", "url": "https://stripe.com" },
+        { "text": "Typescript", "url": "https://www.typescriptlang.org/" },
+        { "text": "Javascript", "url": "https://wiki.selfhtml.org/wiki/JavaScript" },
+        { "text": "SQL", "url": "https://de.wikipedia.org/wiki/SQL" },
+        { "text": "Firebase", "url": "https://firebase.google.com/" },
+        { "text": "MongoDB", "url": "https://www.mongodb.com/" },
+        { "text": "OAuth2", "url": "https://oauth.net/2/" },
+        { "text": "Node.js", "url": "https://nodejs.org/en" },
+        { "text": "Shopify", "url": "https://www.shopify.com/" },
+        { "text": "Wordpress", "url": "https://wordpress.org/" },
+        { "text": "Git", "url": "https://git-scm.com/" },
+        { "text": "Vue.js", "url": "https://vuejs.org/" },
+        { "text": "Linux", "url": "https://www.linux.org/" },
+        { "text": "Electron.js", "url": "https://www.electronjs.org/" },
+        { "text": "Google Search", "url": "https://search.google.com/search-console/about" },
+        { "text": "Flutter", "url": "https://flutter.dev/" },
+        { "text": "GitHub Copilot", "url": "https://github.com/features/copilot" },
+        { "text": "Dart", "url": "https://dart.dev/" },
+        { "text": "Java", "url": "https://www.java.com/" },
+        { "text": "Twilio", "url": "https://www.twilio.com/" },
+        { "text": "GA4", "url": "https://analytics.google.com/" },
+        { "text": "Google Ads", "url": "https://ads.google.com/" },
+        { "text": "SendGrid", "url": "https://sendgrid.com/" },
+        { "text": "i18n", "url": "https://en.wikipedia.org/wiki/Internationalization_and_localization" },
+        { "text": "JWT", "url": "https://jwt.to/" },
+        { "text": "DNS", "url": "https://de.wikipedia.org/wiki/Internationalisierung_(Softwareentwicklung)" }
+    ],
+    "service.title": "My Services",
+    "service.no-service-found.title": "Do You Need Something Else?",
+    "service.no-service-found.subheading": "Please contact me and I will advise you free of charge and without obligation to find the best solution for you.",
+    "page-not-found.title": "Oops!",
+    "page-not-found.subheading": "The page you were looking for could not be found or it no longer exists.",
+    "page-not-found.button.1": "Back to home",
+    "internal-server-error.title": "Oops!!",
+    "internal-server-error.subheading": "An error has occurred on our site. Please try again later.",
+    "service.promo-contact.heading": "Your Wish <br/>comes First!",
+    "service.promo-contact.subheading": "Please contact me and I will advise you free of charge and without obligation to find the best solution for you.",
+    "service.promo-contact.button.text": "Request a Quote Now",
+    "service.promo-contact.button.url": "/contact",
+    "pages.title": {
+        "legal-notice": "Legal Notice",
+        "privacy-policy": "Privacy Policy",
+        "contact": {
+            "title": "Contact - Robert Julian Kratz",
+            "description": "Please contact me and I will advise you free of charge and without obligation to find the best solution for you."
+        },
+        "contact.success": "Contact - Erfolgreich",
+        "internal-server-error": "Internal Server Error",
+        "page-not-found": "Page Not Found",
+        "index": {
+            "title": "Robert Julian Kratz - Software Development & Digital Transformation",
+            "description": "Your expert for customized software development & digital transformation",
+            "url": "https://rjks.us"
+        }
+    },
+    "service.content": {
+        "web-development": {
+            "meta": {
+                "title": "Tailor-made Webdevelopment",
+                "description": "Maßgeschneiderte Webentwicklung mit dem Fokus auf Effizienz, Benutzerfreundlichkeit und Sicherheit.",
+                "keywords": "Webentwicklung, Softwareentwicklung, Individualsoftware"
+            },
+            "title": "Webdevelopment",
+            "subtitle": "Custom web development with a focus on efficiency, usability and security.",
+            "url": "/services/web-development",
+            "description": "I develop a **custom web application** tailored exactly to your needs. I rely on modern technologies such as Vue.js or Node.js. **Integrations** of **existing data sources** such as databases or APIs are also no problem.",
+            "referimage": "/images/illustrations/web-development-small.svg",
+            "referimage.imageAlt": "Web Development Illustration",
+            "refer-button-text": "Learn More",
+            "landing-hero-image.url": "/images/illustrations/web-development-applications-illustration.svg",
+            "landing-hero-image.imageAlt": "Web Development Illustration",
+            "landing-button-text": "Contact Me",
+            "reading-directory-title": "Services",
+            "button-href": "/contact",
+            "color": {
+                "primary": "#e3b127",
+                "secondary": "#FBC531"
+            },
+            "content": [
+                {
+                    "title": "Latest Technologies",
+                    "description": "Using cutting-edge technologies such as Next.js, React and Vue.js in combination with **custom software**, I strive to create products that are not only innovative but also **powerful**. Alternatively, by integrating **proven platforms** such as **Shopify or WordPress**, I can also help optimize the performance of existing software and thus ensure higher site performance.",
+                    "image": "/images/illustrations/web-development-new-tecnologies-illustration.svg",
+                    "alt": "Latest Technologies Illustration",
+                    "id": "new-technologies",
+                    "url": "Latest Technologies"
+                },
+                {
+                    "title": "Best Practices",
+                    "description": "I offer web application development that follows **industry best practices** to create **high-performance, user-friendly and future-proof** websites. Accessibility is at the forefront of my work to ensure that every website is accessible and navigable for all users. With a focus on internationalization and responsive design, I guarantee that websites are globally responsive and optimally displayable on various devices. Integrating **UI/UX design** and a targeted [SEO strategy](/services/seo) also ensures an intuitive user experience and improves the website's online presence.",
+                    "image": "/images/illustrations/web-development-high-performance-illustration.svg.svg",
+                    "alt": "Best Practices Illustration",
+                    "id": "best-practices",
+                    "url": "Best Practices"
+                },
+                {
+                    "title": "Features",
+                    "description": "When developing web applications, I focus on integrating **diverse functionalities and features** that are tailored to specific needs and goals. Whether it's a **blog, contact form, portfolio** or an **online store**, I'm here to create a customized website to suit your needs. My area of expertise particularly includes e-commerce systems, integrating seamless payment options through services such as Stripe (Payment Options). I also offer the implementation of **email and newsletter functionalities** through SendGrid to enable effective communication and customer loyalty. [Feel free to contact me](/contact) with your project ideas and I will make you an offer!",
+                    "image": "/images/illustrations/web-development-accessibility-illustration.svg",
+                    "alt": "Features Illustration",
+                    "id": "features",
+                    "url": "Features"
+                },
+                {
+                    "title": "API Integration",
+                    "description": "I offer the integration of various APIs to connect your website or **web application with various data sources**. No matter whether it is **individually newly developed APIs** or existing ones, I ensure a seamless implementation in your project. For more details on API integration, visit the [Database and Infrastructure](/services/database-and-infrastructure#api-integration) page.",
+                    "image": "/images/illustrations/web-development-data-integration-illustration.svg",
+                    "alt": "API-Anbindung Illustration",
+                    "id": "api-integration",
+                    "url": "API Anbindung"
+                },
+                {
+                    "title": "Analyse Tools",
+                    "description": "With your agreement, I will integrate carefully selected analysis tools such as Google Analytics, Hotjar and others into your website or web application. These tools are essential for gaining detailed insights into user behavior and interactions on your site, which in turn enables targeted improvements and optimizations to be made. By incorporating these analytics tools, I can help you measure, monitor and strategically drive the success of your online presence, always in line with privacy policies and best practices. This not only promotes data-driven decision making, but also enables continuous improvement and adaptation to changing user needs and expectations. See [Continuous Improvement](/services/seo#continuous-improvement)",
+                    "image": "/images/illustrations/web-development-analyse-illustration.svg",
+                    "alt": "Analyse Tools Illustration",
+                    "id": "analyse",
+                    "url": "Analyse-Tools"
+                },
+                {
+                    "title": "Management & Maintenance",
+                    "description": "Of course, as a customer you receive full access to the entire source code of your project. Transparency and control are essential elements of my service and I ensure that **you have full ownership and freedom of action** over your website or application at all times. In addition, I would be happy to advise you when it comes to finding the right [hosting provider](/services/database-and-infrastructure#hosting) and the [domain setup](/services/database-and- infrastructure#domains). If necessary, I will also be happy to take over the **ongoing care and maintenance** of your site to ensure that everything runs smoothly and functions optimally. My goal is to **support you throughout the entire process** and ensure that all technical aspects are handled professionally and **according to your wishes**.",
+                    "image": "/images/illustrations/web-development-data-site-management-illustration.svg",
+                    "alt": "Management and Maintenance Illustration",
+                    "id": "management-and-maintenance",
+                    "url": "Management & Wartung"
+                }
+            ]
+        },
+        "app-development": {
+            "meta": {
+                "title": "Mobile App Development and Desktop App Development",
+                "description": "App development for mobile platforms such as iOS and Android as well as desktop systems such as MacOS and Windows.",
+                "keywords": "App Development, software development, individual software"
+            },
+            "title": "App Development",
+            "subtitle": "Tailor-made apps with a focus on efficiency, usability and security.",
+            "url": "/services/app-development",
+            "description": "I develop applications for mobile platforms such as iOS and Android as well as desktop systems such as MacOS and Windows that are tailored to your specific needs. My main focus is on the **efficiency**, **usability** and **security** of the apps. I am available to provide you with advice and support throughout all phases of the development process - from planning to publication in the respective app store.",
+            "referimage": "/images/illustrations/app-development-small.svg",
+            "referimage.imageAlt": "App Development Illustration",
+            "refer-button-text": "Learn More",
+            "landing-hero-image.url": "/images/illustrations/app-development-applications-illustration.svg",
+            "landing-hero-image.imageAlt": "Web Development Illustration",
+            "landing-button-text": "Get A Quote",
+            "reading-directory-title": "Services",
+            "button-href": "/contact",
+            "color": {
+                "primary": "#2B876B",
+                "secondary": "#43AA8B"
+            },
+            "content": [
+                {
+                    "title": "Mobile App Development",
+                    "description": "I offer comprehensive mobile app development that **works efficiently on both iOS and Android** using Flutter as a technological base. This allows for the creation of a consistent and **responsive UI/UX** that is both functionally and visually appealing. Each app is developed with **a responsive design** that ensures the application works optimally on different devices and screen sizes. Development is **cross-platform oriented** to ensure **wide compatibility and usability**. I also integrate various features such as push notifications, camera functions and other specific requirements to make the app functional and user-friendly. These services are flexible and customized based on the **specific needs and requirements of your project**.",
+                    "image": "/images/illustrations/web-development-data-integration-illustration.svg",
+                    "alt": "Mobile App Development Illustration",
+                    "id": "mobile-app-development",
+                    "url": "Mobile App Development"
+                },
+                {
+                    "title": "Desktop App Development",
+                    "description": "Using Electron JS, I create desktop applications that **run seamlessly and efficiently on MacOS, Windows and Linux**. These applications are developed with multilanguage support to appeal to a **wide user base** and maximize global reach. Authentication features are carefully integrated to ensure the **security of user data** and create a safe usage environment. I also integrate **cloud messaging and other advanced features** to improve connectivity and interaction within the application.",
+                    "image": "/images/illustrations/web-development-data-integration-illustration.svg",
+                    "alt": "desktop app development illustration",
+                    "id": "desktop-app-development",
+                    "url": "Desktop App Development"
+                },
+                {
+                    "title": "Integration into infrastructure",
+                    "description": "I offer solutions that enable seamless connection to **various systems** to ensure the smooth **exchange of data and information**. No matter whether it is about integration into **existing databases**, [learn more](http://localhost:3000/de/services/database-and-infrastructure#database), or **connection to modern cloud systems**, [learn more](http://localhost:3000/de/services/database-and-infrastructure#cloud-integration), my services are aimed at integrating your applications **efficiently and reliably** into any to integrate the desired infrastructure. This integration not only increases operational efficiency, but also increases the **flexibility and scalability** of your projects.",
+                    "image": "/images/illustrations/web-development-data-integration-illustration.svg",
+                    "alt": "Integration in Infrastruktur Illustration",
+                    "id": "infrastructure-integration",
+                    "url": "Integration into infrastructure"
+                },
+                {
+                    "title": "Publishing",
+                    "description": "Publishing your mobile application is a crucial step that I handle carefully and professionally. I support you in publishing your **app on the App Store and Play Store** by managing the entire setup process, including verification and other necessary steps. I also take care of the **versioning of your application** to ensure that your users always receive the latest and improved version of your app. You can rest assured that your app will be published **smoothly and successfully** and that it will adhere to the guidelines and standards of each platform.",
+                    "image": "/images/illustrations/web-development-data-integration-illustration.svg",
+                    "alt": "Publishing Illustration",
+                    "id": "publishing",
+                    "url": "Publishing"
+                },
+                {
+                    "title": "User Analysis",
+                    "description": "User analytics is a critical process that helps deepen **understanding of your mobile application users** and make informed decisions. I use **advanced tools like GA4 and Firebase** to gain detailed insights into user behavior and continually optimize the user experience. By using **A/B testing** and other **analytical strategies**, it is possible to evaluate various elements of the app and make improvements based on real user data. You can rest assured that the **analytics provided will be accurate and insightful** and will help set your mobile app up for success.",
+                    "image": "/images/illustrations/web-development-data-integration-illustration.svg",
+                    "alt": "Nutzeranalyse Illustration",
+                    "id": "user-analysis",
+                    "url": "User Analysis"
+                },
+                {
+                    "title": "Support for your app",
+                    "description": "Supporting your app after publication is a key aspect that I give top priority to. I provide **comprehensive maintenance** services, including regular **security updates and bug fixes** to ensure the **optimal performance** and security of your application. In addition, I take care of the maintenance in the **App Store and Play Store** to ensure the continuous availability and up-to-dateness of your app. [Contact me](/contact) to learn more about how I can ensure the **longevity and quality** of your mobile application.",
+                    "image": "/images/illustrations/web-development-data-integration-illustration.svg",
+                    "alt": "Support for your app Illustration",
+                    "id": "fix-your-software",
+                    "url": "Support for your app"
+                }
+            ]
+        },
+        "e-commerce": {
+            "meta": {
+                "title": "E-Commerce Systems",
+                "description": "Integration of e-commerce systems into your website or web application. Through individual solutions developed for you or the integration of existing e-commerce systems.",
+                "keywords": "E-commerce, software development, Shopify, WordPress, individual software"
+            },
+            "title": "E-Commerce",
+            "subtitle": "Individual solutions or integration of clever existing e-commerce solutions",
+            "url": "/services/e-commerce",
+            "description": "Integration of e-commerce systems into your website or web application. Through **individual**, **solutions** developed for you or the **integration of existing e-commerce systems**, such as Shopify or WooCommerce, I enable you to build a successful online shop.",
+            "referimage.imageAlt": "E-Commerce Illustration",
+            "referimage": "/images/illustrations/e-commerce-small.svg",
+            "refer-button-text": "Learn More",
+            "landing-hero-image.url": "/images/illustrations/e-commerce-shop-system-illustration.svg",
+            "landing-hero-image.imageAlt": "Web Development Illustration",
+            "landing-button-text": "Contact Me",
+            "reading-directory-title": "Services",
+            "button-href": "/contact",
+            "color": {
+                "primary": "#9BD1FF",
+                "secondary": "#BDE0FE"
+            },
+            "content": [
+                {
+                    "title": "Bewährte Techniken",
+                    "description": "Ich biete flexible Lösungen im Bereich E-Commerce an, die auf bewährten Techniken basieren und auf die individuellen Bedürfnisse Ihres Projekts zugeschnitten sind. **Sie haben die Option, Individualsoftware entwickeln zu lassen** oder **bestehende Systeme** wie **Shopify** oder **WordPress** zu integrieren, je nachdem, was Ihre Vision und Ihr Projekt am besten unterstützt. Gerne berate ich Sie, um die **optimale Strategie und Technik für Ihr E-Commerce-Vorhaben** zu finden und umzusetzen. Dieses Angebot steht zur Verfügung, um Ihr Projekt nach Ihren Wünschen und Anforderungen bestmöglich zu realisieren. [Klicken Sie hier](/contact) um mich zu kontaktieren.",
+                    "image": "/images/illustrations/e-commerce-usability-illustration.svg",
+                    "alt": "Bewährte Techniken Illustration",
+                    "id": "proven-techniques",
+                    "url": "Bewährte Techniken"
+                },
+                {
+                    "title": "Produkt Management und Präsentation",
+                    "description": "Ich biete **maßgeschneiderte Lösungen** im Bereich Produktmanagement und -präsentation für E-Commerce-Systeme an. Dabei konzentriere ich mich darauf, Ihre **Produkte optimal zu platzieren**, sodass sie in Suchmaschinen wie Google hervorragend sichtbar sind. Zudem lege ich großen Wert auf ein ansprechendes **UI/UX-Design**, um die Benutzerfreundlichkeit zu maximieren und somit die **Conversion-Rate** zu steigern. Dieser Service ist optional und wird individuell an Ihre Bedürfnisse und Ziele angepasst, um den Erfolg Ihres Online-Geschäfts zu optimieren.",
+                    "image": "/images/illustrations/e-commerce-product-presentation-illustration.svg",
+                    "alt": "Produkt Management und Präsentation Illustration",
+                    "id": "product-management-and-praesentation",
+                    "url": "Produkt Management und Präsentation"
+                },
+                {
+                    "title": "Sicherheit",
+                    "description": "Kunden können sich auf robuste Sicherheitsmaßnahmen verlassen, wie **SSL-Zertifikate**, die eine sichere Verbindung gewährleisten. Darüber hinaus implementiere ich Verschlüsselungstechnologien, um die **Integrität und Vertraulichkeit der Kundendaten** zu schützen. Die von mir entwickelten oder integrierten Systeme sind darauf ausgerichtet, die **Privatsphäre Ihrer Kunden zu wahren** und ein sicheres Online-Einkaufserlebnis zu bieten.",
+                    "image": "/images/illustrations/e-commerce-securety-illustration.svg",
+                    "alt": " Illustration",
+                    "id": "security",
+                    "url": "Sicherheit"
+                },
+                {
+                    "title": "Zahlungsoptionen",
+                    "description": "Im Bereich der Zahlungslösungen biete ich eine Vielzahl von Optionen an, um den unterschiedlichen Bedürfnissen Ihrer Kunden gerecht zu werden. Mit der **Integration von Zahlungsdienstleistern wie Stripe** ist es möglich, eine breite Palette von Zahlungsmethoden zu akzeptieren, einschließlich, aber nicht beschränkt auf **PayPal, Bitcoin, Apple Pay, Google Pay, Visa und MasterCard**. Ich sorge auch für die ordnungsgemäße Rechnungsstellung, um den Kaufprozess transparent und nachvollziehbar zu gestalten. Selbstverständlich gehören auch **Rückerstattungsprozesse zu den Services**, die ich anbiete, um eine kundenfreundliche Kaufabwicklung zu gewährleisten.",
+                    "image": "/images/illustrations/e-commerce-payments-illustration.svg",
+                    "alt": "Zahlungsoptionen Illustration",
+                    "id": "payment-options",
+                    "url": "Zahlungsoptionen"
+                },
+                {
+                    "title": "SEO",
+                    "description": "Für diejenigen, die Wert auf eine **starke Online-Präsenz** legen, biete ich SEO-Optimierung von Grund auf an. Durch gezielte Strategien und Techniken wird Ihre Website so gestaltet, dass sie in **Suchmaschinenergebnissen prominenter erscheint**. Für weiterführende Informationen und detaillierte Strategien können Sie gerne den Bereich [Suchmaschinenoptimierung](/services/seo) besuchen.",
+                    "image": "/images/illustrations/e-commerce-seo-illustration.svg",
+                    "alt": "Suchmaschinenoptimierung Illustration",
+                    "id": "seo",
+                    "url": "Suchmaschinenoptimierung (SEO)"
+                },
+                {
+                    "title": "Nutzeranalyse",
+                    "description": "Wenn Sie daran interessiert sind, tiefere Einblicke in das Verhalten und die **Vorlieben Ihrer Kunden** zu gewinnen, biete ich **umfassende Nutzeranalysen** an. Durch den Einsatz von Tools wie **Google Ads und GA4**, ermögliche ich **präzises Conversion-Tracking**, um die Effektivität Ihrer Website und Marketingstrategien zu optimieren. Zusammen können wir die Daten nutzen, um die Vorlieben und Bedürfnisse Ihrer Kunden besser zu verstehen und Ihre Angebote entsprechend anzupassen. Dies ist ein Angebot, um Ihre **Online-Präsenz zu verbessern**, und steht zur Verfügung, sollte es Ihren Anforderungen entsprechen.",
+                    "image": "/images/illustrations/e-commerce-cohort-analysis-illustration.svg",
+                    "alt": "Nutzeranalyse Illustration",
+                    "id": "user-analysis",
+                    "url": "Nutzeranalyse"
+                },
+                {
+                    "title": "Kundenservice",
+                    "description": "Kundenservice ist das Rückgrat eines erfolgreichen E-Commerce-Unternehmens. Ich konzentriere mich darauf, innovative Software zu entwickeln, die den **Kontakt zwischen Ihnen und Ihren Kunden revolutionieren**. Meine Entwicklungen zielen darauf ab, einen **reibungslosen, effizienten und kundenfreundlichen Service** zu gewährleisten, der die Kundenzufriedenheit und -loyalität fördert. Durch die Implementierung maßgeschneiderter Technologien wird die Kommunikation verbessert, **Kundenanfragen werden schneller und präziser beantwortet**, und die Kunden fühlen sich wertgeschätzt und verstanden. Diese kundenorientierte Herangehensweise trägt dazu bei, dass Ihr E-Commerce-Geschäft nicht nur die Erwartungen der Kunden erfüllt, sondern diese sogar übertrifft, indem ein exzellenter und empathischer Kundenservice geboten wird.",
+                    "image": "/images/illustrations/e-commerce-customer-service-illustration.svg",
+                    "alt": "Kundenservice Illustration",
+                    "id": "kundenservice",
+                    "url": "Kundenservice"
+                },
+                {
+                    "title": "Betreuung Ihrers Online-Shops",
+                    "description": "Ihr E-Commerce-System kann stets **verbessert und optimiert** werden, um ein höheres Ranking und **bessere Performance** zu erzielen. Ich biete eine kontinuierliche Betreuung und Verbesserung Ihres E-Commerce-Systems an, indem ich **regelmäßige Wartungen** durchführe und ständig nach Möglichkeiten suche, um die **Systemperformance zu steigern**. Gemeinsam können wir durch kontinuierliche Verbesserungen sicherstellen, dass Ihr E-Commerce-System immer auf dem **neuesten Stand** und so effizient wie möglich ist. Dieses Angebot steht zur Verfügung, um Ihr Geschäft nach vorne zu bringen, ganz nach Ihren individuellen Bedürfnissen und Anforderungen.",
+                    "image": "/images/illustrations/e-commerce-support-software-illustration.svg.svg",
+                    "alt": "Software Support Illustration",
+                    "id": "fix-your-software",
+                    "url": "Betreuung Ihrers Online-Shops"
+                }
+            ]
+        },
+        "database-and-infrastructure": {
+            "meta": {
+                "title": "Database & Infrastructure",
+                "description": "Development of individual backend systems and database technologies for your website or application. I offer tailor-made solutions designed specifically for you to effectively integrate existing or novel systems.",
+                "keywords": "Backend development, database development, software development, individual software"
+            },
+            "title": "Database & Infrastructure",
+            "subtitle": "Individual software in the backend area for your business requirements",
+            "url": "/services/database-and-infrastructure",
+            "description": "Development of backend systems and database technologies for your website or application. I offer **tailor-made solutions** designed specifically for you to effectively integrate **existing or novel systems**. My expertise includes database systems such as MySQL, PostgreSQL and MongoDB as well as backend technologies such as Node.js, Express.js and Java. I also offer the integration of cloud services including AWS, Google Cloud and Azure.",
+            "referimage.imageAlt": "Database & infrastructure Illustration",
+            "referimage": "/images/illustrations/backend-development-small.svg",
+            "refer-button-text": "Go To Integrations",
+            "landing-hero-image.url": "/images/illustrations/database-infrastructure-server-illustration.svg.svg",
+            "landing-hero-image.imageAlt": "Web Development Illustration",
+            "landing-button-text": "Get A Quote",
+            "reading-directory-title": "Services",
+            "button-href": "/contact",
+            "color": {
+                "primary": "#2958d9",
+                "secondary": "#4E7DFF"
+            },
+            "content": [
+                {
+                    "title": "Cloud Integration",
+                    "description": "As an expert in backend development and cloud integration, I offer specialized services for developing custom software that is perfectly tailored to your business needs. By using leading cloud platforms such as **AWS, Google Cloud and Azure**, I enable a **robust and scalable architecture** for your software solutions. The integration of advanced technologies such as Firebase not only promotes the performance but also the adaptability of applications in the dynamic digital environment. Let's work together to create powerful, seamlessly integrated and **customized backend solutions** that drive the operational success of your company.",
+                    "image": "/images/illustrations/database-infrastructure-cloud-intgration-illustration.svg",
+                    "alt": "Cloud Integration Illustration",
+                    "id": "cloud-integration",
+                    "url": "Cloud Integration"
+                },
+                {
+                    "title": "Database",
+                    "description": "For the development of individual software, I integrate database systems and work with technologies such as **SQL, MongoDB and GraphQL** to design everything according to your ideas. I ensure that your data is well protected by applying strict **encryption methods** to ensure the security of sensitive information and maintain the integrity of your business processes.",
+                    "image": "/images/illustrations/database-infrastructure-database-illustration.svg",
+                    "alt": "Database Illustration",
+                    "id": "database",
+                    "url": "Database"
+                },
+                {
+                    "title": "API Integration",
+                    "description": "With specialized know-how in Node.js and Express, I develop scalable and **high-performance Custom APIs and REST APIs** that function smoothly and are tailored precisely to the customer's needs. It is also possible for me to seamlessly integrate **existing APIs such as Weather, Sports, Discord, Telegram** and others into your software solution to ensure **maximum functionality and user comfort**. This enables efficient and versatile use of your application to achieve optimal business results.",
+                    "image": "/images/illustrations/database-infrastructure-api-intgration-illustration.svg",
+                    "alt": "API Integration Illustration",
+                    "id": "api-integration",
+                    "url": "API Integration"
+                },
+                {
+                    "title": "Hosting",
+                    "description": "I identify the **ideal hosting partner** that meets your project's specific needs and **configure the server environment using proven technologies** such as Ubuntu Linux to ensure robustness and reliability. When required, I implement cloud setups to **optimize flexibility and scalability**. Through these carefully coordinated measures, I ensure that your application is hosted in a **secure, high-performance and reliable environment**.",
+                    "image": "/images/illustrations/database-infrastructure-hosting-illustration.svg",
+                    "alt": "Hosting Illustration",
+                    "id": "hosting",
+                    "url": "Hosting"
+                },
+                {
+                    "title": "Webscraping",
+                    "description": "I develop web scraping techniques to **efficiently extract data from web providers such as Amazon, Wish, Alibaba and others**. This uses Puppeteer, a highly developed toolchain that ensures the retrieval of precise and reliable data. I also implement **automation functions** that **make recurring processes efficient** and increase productivity. These methods ensure continuous data updates so your software can always work with the latest information.",
+                    "image": "/images/illustrations/database-infrastructure-webscraping-illustration.svg",
+                    "alt": "Webscraping Illustration",
+                    "id": "webscraping",
+                    "url": "Webscraping"
+                },
+                {
+                    "title": "Domains",
+                    "description": "When designing your individual software, I also offer comprehensive **support in the area of domain management**. This includes the optional setup and **configuration of the DNS** to ensure **reliable and efficient accessibility of your website**. As an additional service, I offer **verification measures** that help protect your domain from **unwanted access**. In addition, it is also possible to set up and configure **email accounts** and other services according to your needs and requirements.",
+                    "image": "/images/illustrations/database-infrastructure-domains-illustration.svg",
+                    "alt": "Domains Illustration",
+                    "id": "domains",
+                    "url": "Domains"
+                },
+                {
+                    "title": "Support for your software",
+                    "description": "I offer comprehensive **support of your software** as an optional service. I ensure that your applications are always up to date by carrying out regular updates and maintenance. This also includes the continuous maintenance and optimization of the software to ensure sustainable and trouble-free performance. This service is designed to **save you time** and ensure the **smooth operation** of your software.",
+                    "image": "/images/illustrations/database-infrastructure-support-software-illustration.svg",
+                    "alt": "Support for your software Illustration",
+                    "id": "fix-your-software",
+                    "url": "Support for your software"
+                }
+            ]
+        },
+        "seo": {
+            "meta": {
+                "title": "Search Engine Optimization",
+                "description": "Search engine optimization (SEO) for your website or web application. I offer optimization of your website from the lowest technical level.",
+                "keywords": "Search Engine Optimization"
+            },
+            "title": "SEO",
+            "subtitle": "Optimize. Analyze. Repeat.<br/> Realize success in the digital space",
+            "url": "/services/seo",
+            "description": "As a software developer, I have the opportunity to **optimize your website from the lowest technical level**. In addition to the technical aspects of search engine optimization, such as optimizing loading time, page structure and metadata of your website. I would also be happy to integrate your website into the **Google Search Console** and **Google Analytics** as well as Google Ads with suitable campaigns.",
+            "referimage.imageAlt": "Search Engin Optimization Illustration",
+            "referimage": "/images/illustrations/seo-small.svg",
+            "refer-button-text": "Learn More About SEO",
+            "landing-hero-image.url": "/images/illustrations/seo-search-illustration.svg",
+            "landing-hero-image.imageAlt": "Web Development Illustration",
+            "landing-button-text": "Get A Quote",
+            "reading-directory-title": "Services",
+            "button-href": "/contact",
+            "color": {
+                "primary": "#FFB3C9",
+                "secondary": "#FFC6D9"
+            },
+            "content": [
+                {
+                    "title": "Web analytics",
+                    "description": "I offer **comprehensive web analysis** to fully utilize the SEO potential of your current site. By thoroughly examining **all SEO-related aspects** of your website, including technical and local SEO criteria, I identify areas that could be improved and make **specific suggestions** for optimization. I also analyze the **keyword usage** on your site to ensure they are ranked effectively to maximize **visibility**. This is an offer to improve your website and **strengthen your brand's online presence** according to your individual needs and goals.",
+                    "image": "/images/illustrations/seo-analyse-illustration.svg",
+                    "alt": "Webanalyse Illustration",
+                    "id": "webanalysis",
+                    "url": "Webanalyse"
+                },
+                {
+                    "title": "Tecnical and Lokale SEO",
+                    "description": "I offer a specialized service in the area of **technical and local SEO**. During technical SEO, I **optimize the structure of your website** to ensure **smooth crawlability** and indexing by search engines. For **local SEO**, I focus on improving your store's **online visibility** in local search results, which is especially important for attracting **local customers**. This offering is available to address the specific needs of your website or business and is fully customizable to your individual goals.",
+                    "image": "/images/illustrations/seo-technical-solution-illustration.svg",
+                    "alt": "Tecnical and Lokale SEO Illustration",
+                    "id": "technical-and-local-seo",
+                    "url": "Tecnical and Lokale SEO"
+                },
+                {
+                    "title": "Social Media Integration",
+                    "description": "Social media integration plays a crucial role in increasing your website's online presence and visibility. By effectively using platforms such as **Facebook, Instagram and Twitter**, we not only promote the distribution of your content, but also create **valuable backlinks** that support your website's SEO. I work to **seamlessly connect** your website content with your social media profiles to ensure a consistent and diverse online presence. I focus on ensuring the content shared is relevant and engaging **to encourage interaction with your audience and maximize the reach of your posts**. By integrating social media, your website becomes a dynamic and connected part of your overall online strategy, actively contributing to increasing your online authority and customer loyalty.",
+                    "image": "/images/illustrations/seo-social-media-illustration.svg",
+                    "alt": " Illustration",
+                    "id": "social-media-integration",
+                    "url": "Social Media Integration"
+                },
+                {
+                    "title": "Keyword Research",
+                    "description": "Keyword research is essential for effective SEO. I focus on **identifying the specific search terms and phrases** used by potential customers. Through meticulous analysis, I ensure that your **website content is precisely tailored to the requests and needs of your target group**. This not only optimizes your page's visibility in search results, but also promotes the relevance and accessibility of your content. By strategically placing selected keywords, your website becomes more effective in communicating with search engines and visitors, which forms the basis for your online success.",
+                    "image": "/images/illustrations/seo-keyword-research-illustration.svg",
+                    "alt": "Keyword-Research Illustration",
+                    "id": "keyword-research",
+                    "url": "Keyword Research"
+                },
+                {
+                    "title": "Continuous Improvement",
+                    "description": "Continuous improvement is the key to maintaining and increasing your website's online presence. **SEO is a dynamic field** and best practices are constantly changing. As a dedicated software developer, my goal is to constantly **update and improve** your website to keep up with these changes. Through regular reviews and adjustments to the latest **SEO strategies and techniques**, we ensure that your website is always optimized and delivers the **best possible results**. This means not only updating keywords and content, but also **improving technical aspects** and adapting to new **algorithms and trends**. This continuous improvement makes your website resilient to changes and always remains relevant and attractive for your target group.",
+                    "image": "/images/illustrations/seo-improvment-illustration.svg",
+                    "alt": "Continuous Improvement Illustration",
+                    "id": "continuous-improvement",
+                    "url": "Continuous Improvement"
+                }
+            ]
+        }
+    }
+}

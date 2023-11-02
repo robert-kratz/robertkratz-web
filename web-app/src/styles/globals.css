@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One:wght@100;300;400;700&display=swap');
+
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+    background: #1c1e26;
+    scroll-behavior: smooth;
+}
+
+/* @media (prefers-color-scheme: dark) {
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
+} */
+.grecaptcha-badge {
+    visibility: hidden;
+}
+
+.hover-underline {
+    position: relative;
+    display: inline-block;
+}
+
+.hover-underline::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1.5px;
+    bottom: 0;
+    right: 0;
+    transition: width 0.3s ease;
+}
+
+.hover-underline:hover::after {
+    width: 100%;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        display: flex;
+    }
+    100% {
+        opacity: 1;
+        display: flex;
+
+        transition: opacity 0.3s ease-in-out;
+    }
+}
+
+@keyframes randomBackgroundMove {
+    0% {
+        background-position: 0% 0%;
+    }
+    25% {
+        background-position: 0% 25%;
+    }
+    50% {
+        background-position: 0% 0%;
+    }
+    75% {
+        background-position: 0% 25%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.backgroud-alive-animation {
+    animation: randomBackgroundMove 15s infinite; /* Adjust the duration as needed */
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        display: flex;
+        transition: opacity 0.3s ease-in-out;
+    }
+    50% {
+        opacity: 0;
+        display: none;
+    }
+    100% {
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+    opacity: 1;
+}
+
+.fade-out {
+    animation: fadeOut 1.2s ease-in-out;
+    opacity: 0;
+}
+
+@keyframes randomMove {
+    0% {
+        top: 0;
+        left: 0;
+    }
+    25% {
+        top: 0;
+        left: 100%;
+    }
+    50% {
+        top: 100%;
+        left: 100%;
+    }
+    75% {
+        top: 100%;
+        left: 0;
+    }
+    100% {
+        top: 0;
+        left: 0;
+    }
+}
+
+.random-move {
+    animation: randomMove 5s infinite;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

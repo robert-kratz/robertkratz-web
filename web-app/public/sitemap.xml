@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+   <url>
+      <loc>http://www.rjks.us/</loc>
+      <priority>1.00</priority>
+      <xhtml:link rel="alternate" hreflang="de" href="http://www.rjks.us/de" />
+   </url>
+   <url>
+      <loc>http://www.rjks.us/contact</loc>
+      <priority>0.90</priority>
+      <xhtml:link rel="alternate" hreflang="de" href="http://www.rjks.us/de/contact" />
+   </url>
+   <url>
+      <loc>http://www.rjks.us/services/web-development</loc>
+        <priority>0.80</priority>
+      <xhtml:link rel="alternate" hreflang="de" href="http://www.rjks.us/de/services/web-development" />
+   </url>
+   <url>
+      <loc>http://www.rjks.us/services/mobile-app-development</loc>
+        <priority>0.80</priority>
+      <xhtml:link rel="alternate" hreflang="de" href="http://www.rjks.us/de/services/mobile-app-development" />
+   </url>
+   <url>
+      <loc>http://www.rjks.us/services/e-commerce</loc>
+        <priority>0.80</priority>
+      <xhtml:link rel="alternate" hreflang="de" href="http://www.rjks.us/de/services/e-commerce" />
+   </url>
+   <url>
+      <loc>http://www.rjks.us/services/database-and-infrastructure</loc>
+        <priority>0.80</priority>
+      <xhtml:link rel="alternate" hreflang="de" href="http://www.rjks.us/de/services/database-and-infrastructure" />
+   </url>
+   <url>
+      <loc>http://www.rjks.us/services/seo</loc>
+        <priority>0.80</priority>
+      <xhtml:link rel="alternate" hreflang="de" href="http://www.rjks.us/de/services/seo" />
+   </url>
+</urlset>
