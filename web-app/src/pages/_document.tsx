@@ -3,7 +3,7 @@ import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/do
 
 const { publicRuntimeConfig } = getConfig();
 
-const { GA_TAG } = publicRuntimeConfig;
+const { GA_TAG, DOMAIN } = publicRuntimeConfig;
 
 interface MyDocumentProps {
     locale: string;
@@ -20,12 +20,24 @@ class MyDocument extends Document<MyDocumentProps> {
     }
 
     render() {
+        const { __NEXT_DATA__ } = this.props;
+        const { locale, locales, defaultLocale, domainLocales } = __NEXT_DATA__;
+
+        const path = this.props.dangerousAsPath || '';
+
         return (
             <Html lang={this.props.locale}>
                 <Head>
                     <script>
                         {`window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', '${GA_TAG}');`}
                     </script>
+                    {locales?.map((lng) => {
+                        const href = domainLocales?.find((d) => d.defaultLocale === lng)
+                            ? `https://${lng}.${DOMAIN}${path}`
+                            : `https://${DOMAIN}/${lng}${path}`;
+                        return <link rel="alternate" hrefLang={lng} href={href} key={lng} />;
+                    })}
+                    <link rel="alternate" hrefLang="x-default" href={`https://${DOMAIN}${path}`} />
                 </Head>
                 <body>
                     <Main />
