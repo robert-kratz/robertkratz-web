@@ -1,6 +1,6 @@
 {
     "home.title": "Robert Julian Kratz",
-    "home.subheading": "Ihr Experte für maßgeschneiderte\n Softwareentwicklung & Digitale Transformation",
+    "home.subheading": "Ihr Experte für maßgeschneiderte<br/> Softwareentwicklung & Digitale Transformation",
     "home.button.1.text": "Meine Leistungen",
     "home.button.1.href": "#service",
     "home.button.2.text": "Jetzt Kontaktieren",
@@ -314,7 +314,7 @@
                 {
                     "title": "Mobile App Entwicklung",
                     "description": "Ich biete eine umfassende Entwicklung von mobilen Apps an, die **sowohl auf iOS als auch Android effizient funktionieren**, indem ich Flutter als technologische Basis nutze. Dies ermöglicht die Schaffung eines konsistenten und **ansprechenden UI/UX**, das sowohl funktional als auch visuell ansprechend ist. Jede App wird mit **einem responsiven Design** entwickelt, das sicherstellt, dass die Anwendung auf verschiedenen Geräten und Bildschirmgrößen optimal funktioniert. Die Entwicklung ist **cross-platform-orientiert**, um eine **weitreichende Kompatibilität und Benutzerfreundlichkeit sicherzustellen**. Zudem integriere ich verschiedene Features wie Push-Benachrichtigungen, Kamerafunktionen und andere spezifische Anforderungen, um die App funktional und benutzerfreundlich zu gestalten. Diese Dienstleistungen sind flexibel und werden nach den **spezifischen Bedürfnissen und Anforderungen Ihres Projekts angepasst**.",
-                    "image": "/images/illustrations/web-development-data-integration-illustration.svg",
+                    "image": "/images/illustrations/app-development-mobile-app-development.svg",
                     "alt": "Mobile App Entwicklung Illustration",
                     "id": "mobile-app-development",
                     "url": "Mobile App Entwicklung"
@@ -322,7 +322,7 @@
                 {
                     "title": "Desktop App Entwicklung",
                     "description": "Durch die Nutzung von Electron JS erstelle ich Desktop-Anwendungen, die **nahtlos und effizient auf MacOS, Windows und Linux laufen**. Diese Anwendungen werden mit Multilanguage-Unterstützung entwickelt, um eine **breite Benutzerbasis** anzusprechen und die globale Reichweite zu maximieren. Authentifizierungsfunktionen werden sorgfältig integriert, um die **Sicherheit der Benutzerdaten** zu gewährleisten und ein sicheres Nutzungsumfeld zu schaffen. Ich integriere auch **Cloud-Messaging und andere erweiterte Features**, um die Konnektivität und Interaktion innerhalb der Anwendung zu verbessern.",
-                    "image": "/images/illustrations/web-development-data-integration-illustration.svg",
+                    "image": "/images/illustrations/app-development-desktop-app-development.svg",
                     "alt": "desktop app development illustration",
                     "id": "desktop-app-development",
                     "url": "Desktop App Entwicklung"
@@ -330,7 +330,7 @@
                 {
                     "title": "Integration in Infrastruktur",
                     "description": "Ich biete Lösungen, die eine nahtlose Anbindung an **diverse Systeme** ermöglichen, um den reibungslosen **Austausch von Daten und Informationen zu gewährleisten**. Egal ob es um die Integration in **vorhandene Datenbanken** geht, [mehr erfahren](http://localhost:3000/de/services/database-and-infrastructure#database), oder um die **Verbindung mit modernen Cloud-Systemen**, [mehr erfahren](http://localhost:3000/de/services/database-and-infrastructure#cloud-integration), meine Services sind darauf ausgerichtet, Ihre Anwendungen **effizient und zuverlässig** in jede gewünschte Infrastruktur zu integrieren. Durch diese Integration wird nicht nur die operative Effizienz gesteigert, sondern auch die **Flexibilität und Skalierbarkeit** Ihrer Projekte erhöht. ",
-                    "image": "/images/illustrations/web-development-data-integration-illustration.svg",
+                    "image": "/images/illustrations/app-development-integration-infrastructure.svg",
                     "alt": "Integration in Infrastruktur Illustration",
                     "id": "infrastructure-integration",
                     "url": "Integration in Infrastruktur"
@@ -338,7 +338,7 @@
                 {
                     "title": "Publishing",
                     "description": "Das Publishing Ihrer mobilen Anwendung ist ein entscheidender Schritt, den ich sorgfältig und professionell handle. Ich unterstütze Sie bei der Veröffentlichung Ihrer **App im App Store und Play Store**, indem ich den gesamten Setup-Prozess, einschließlich der Verifizierung und weiteren notwendigen Schritten, manage. Zudem kümmere ich mich um die **Versionierung Ihrer Anwendung**, um sicherzustellen, dass Ihre Nutzer stets die aktuellste und verbesserte Version Ihrer App erhalten. Sie können sich darauf verlassen, dass Ihre App **reibungslos und erfolgreich** veröffentlicht wird, und dass sie den Richtlinien und Standards der jeweiligen Plattformen entspricht.",
-                    "image": "/images/illustrations/web-development-data-integration-illustration.svg",
+                    "image": "/images/illustrations/app-development-publishing.svg",
                     "alt": "Publishing Illustration",
                     "id": "publishing",
                     "url": "Publishing"
@@ -346,7 +346,7 @@
                 {
                     "title": "Nutzeranalyse",
                     "description": "Die Nutzeranalyse ist ein kritischer Prozess, der dazu beiträgt, das **Verständnis für die Benutzer Ihrer mobilen Anwendung** zu vertiefen und fundierte Entscheidungen zu treffen. Ich setze **fortschrittliche Tools wie GA4 und Firebase** ein, um detaillierte Einblicke in das Benutzerverhalten zu erhalten und die Benutzererfahrung kontinuierlich zu optimieren. Durch den Einsatz von**A/B-Testing** und anderen **analytischen Strategien** ist es möglich, verschiedene Elemente der App zu bewerten und Verbesserungen vorzunehmen, die auf realen Benutzerdaten basieren. Sie können sicher sein, dass die **bereitgestellten Analysen präzise und aufschlussreich sind** und dabei helfen, Ihre mobile Anwendung auf Erfolgskurs zu bringen.",
-                    "image": "/images/illustrations/web-development-data-integration-illustration.svg",
+                    "image": "/images/illustrations/app-development-user-analyse.svg",
                     "alt": "Nutzeranalyse Illustration",
                     "id": "user-analysis",
                     "url": "Nutzeranalyse"
@@ -354,7 +354,7 @@
                 {
                     "title": "Betreuung Ihrer App",
                     "description": "Die Betreuung Ihrer App nach der Veröffentlichung ist ein zentraler Aspekt, den ich mit höchster Priorität handle. Ich biete **umfassende Wartungsleistungen**, einschließlich regelmäßiger **Sicherheitsupdates und Bugfixes**, um die **optimale Performance** und Sicherheit Ihrer Anwendung sicherzustellen. Zusätzlich übernehme ich die Pflege im **App Store und Play Store**, um die kontinuierliche Verfügbarkeit und Aktualität Ihrer App zu gewährleisten. [Kontaktieren Sie mich](/contact), um mehr darüber zu erfahren, wie ich die **Langlebigkeit und Qualität** Ihrer mobilen Anwendung sicherstellen kann.",
-                    "image": "/images/illustrations/web-development-data-integration-illustration.svg",
+                    "image": "/images/illustrations/app-development-maintenance-app.svg",
                     "alt": "Betreuung Ihrer App Illustration",
                     "id": "fix-your-software",
                     "url": "Betreuung Ihrer App"

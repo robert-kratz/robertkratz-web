@@ -314,7 +314,7 @@
                 {
                     "title": "Mobile App Development",
                     "description": "I offer comprehensive mobile app development that **works efficiently on both iOS and Android** using Flutter as a technological base. This allows for the creation of a consistent and **responsive UI/UX** that is both functionally and visually appealing. Each app is developed with **a responsive design** that ensures the application works optimally on different devices and screen sizes. Development is **cross-platform oriented** to ensure **wide compatibility and usability**. I also integrate various features such as push notifications, camera functions and other specific requirements to make the app functional and user-friendly. These services are flexible and customized based on the **specific needs and requirements of your project**.",
-                    "image": "/images/illustrations/web-development-data-integration-illustration.svg",
+                    "image": "/images/illustrations/app-development-mobile-app-development.svg",
                     "alt": "Mobile App Development Illustration",
                     "id": "mobile-app-development",
                     "url": "Mobile App Development"
@@ -322,7 +322,7 @@
                 {
                     "title": "Desktop App Development",
                     "description": "Using Electron JS, I create desktop applications that **run seamlessly and efficiently on MacOS, Windows and Linux**. These applications are developed with multilanguage support to appeal to a **wide user base** and maximize global reach. Authentication features are carefully integrated to ensure the **security of user data** and create a safe usage environment. I also integrate **cloud messaging and other advanced features** to improve connectivity and interaction within the application.",
-                    "image": "/images/illustrations/web-development-data-integration-illustration.svg",
+                    "image": "/images/illustrations/app-development-desktop-app-development.svg",
                     "alt": "desktop app development illustration",
                     "id": "desktop-app-development",
                     "url": "Desktop App Development"
@@ -330,7 +330,7 @@
                 {
                     "title": "Integration into infrastructure",
                     "description": "I offer solutions that enable seamless connection to **various systems** to ensure the smooth **exchange of data and information**. No matter whether it is about integration into **existing databases**, [learn more](http://localhost:3000/de/services/database-and-infrastructure#database), or **connection to modern cloud systems**, [learn more](http://localhost:3000/de/services/database-and-infrastructure#cloud-integration), my services are aimed at integrating your applications **efficiently and reliably** into any to integrate the desired infrastructure. This integration not only increases operational efficiency, but also increases the **flexibility and scalability** of your projects.",
-                    "image": "/images/illustrations/web-development-data-integration-illustration.svg",
+                    "image": "/images/illustrations/app-development-integration-infrastructure.svg",
                     "alt": "Integration in Infrastruktur Illustration",
                     "id": "infrastructure-integration",
                     "url": "Integration into infrastructure"
@@ -338,7 +338,7 @@
                 {
                     "title": "Publishing",
                     "description": "Publishing your mobile application is a crucial step that I handle carefully and professionally. I support you in publishing your **app on the App Store and Play Store** by managing the entire setup process, including verification and other necessary steps. I also take care of the **versioning of your application** to ensure that your users always receive the latest and improved version of your app. You can rest assured that your app will be published **smoothly and successfully** and that it will adhere to the guidelines and standards of each platform.",
-                    "image": "/images/illustrations/web-development-data-integration-illustration.svg",
+                    "image": "/images/illustrations/app-development-publishing.svg",
                     "alt": "Publishing Illustration",
                     "id": "publishing",
                     "url": "Publishing"
@@ -346,7 +346,7 @@
                 {
                     "title": "User Analysis",
                     "description": "User analytics is a critical process that helps deepen **understanding of your mobile application users** and make informed decisions. I use **advanced tools like GA4 and Firebase** to gain detailed insights into user behavior and continually optimize the user experience. By using **A/B testing** and other **analytical strategies**, it is possible to evaluate various elements of the app and make improvements based on real user data. You can rest assured that the **analytics provided will be accurate and insightful** and will help set your mobile app up for success.",
-                    "image": "/images/illustrations/web-development-data-integration-illustration.svg",
+                    "image": "/images/illustrations/app-development-user-analyse.svg",
                     "alt": "Nutzeranalyse Illustration",
                     "id": "user-analysis",
                     "url": "User Analysis"
@@ -354,7 +354,7 @@
                 {
                     "title": "Support for your app",
                     "description": "Supporting your app after publication is a key aspect that I give top priority to. I provide **comprehensive maintenance** services, including regular **security updates and bug fixes** to ensure the **optimal performance** and security of your application. In addition, I take care of the maintenance in the **App Store and Play Store** to ensure the continuous availability and up-to-dateness of your app. [Contact me](/contact) to learn more about how I can ensure the **longevity and quality** of your mobile application.",
-                    "image": "/images/illustrations/web-development-data-integration-illustration.svg",
+                    "image": "/images/illustrations/app-development-maintenance-app.svg",
                     "alt": "Support for your app Illustration",
                     "id": "fix-your-software",
                     "url": "Support for your app"
