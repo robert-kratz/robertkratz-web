@@ -27,7 +27,7 @@ export default function Home() {
                                 <TranslationElement text="home.title" />
                             </h1>
                             <div className="flex justify-start items-center space-x-4">
-                                <Image src="/icons/blue-bolt.svg" alt="Strong energy logo" width={32} height={32} />
+                                <Image src="/icons/blue-bolt.svg" alt="" width={32} height={32} />
                                 <h2 className="font-Inter font-light text-md md:text-xl text-semi-white text-left leading-relaxed tracking-wide">
                                     <TranslationElement text="home.subheading" />
                                 </h2>
