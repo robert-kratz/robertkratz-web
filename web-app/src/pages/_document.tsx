@@ -39,6 +39,8 @@ class MyDocument extends Document<MyDocumentProps> {
               `,
                         }}></script>
                     {locales?.map((lng) => {
+                        if (lng === defaultLocale) return;
+
                         const href = domainLocales?.find((d) => d.defaultLocale === lng)
                             ? `https://${lng}.${DOMAIN}${path}`
                             : `https://${DOMAIN}/${lng}${path}`;
