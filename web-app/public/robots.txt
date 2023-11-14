@@ -5,5 +5,10 @@ Allow: /
 # Host
 Host: https://www.rjks.us
 
+Disallow: /legal-notice
+Disallow: /privacy-policy
+Disallow: /de/legal-notice
+Disallow: /de/privacy-policy
+
 # Sitemaps
 Sitemap: https://www.rjks.us/sitemap.xml
