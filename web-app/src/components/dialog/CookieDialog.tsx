@@ -17,22 +17,6 @@ export default function CookieDialog() {
         const consent = getUserConsent();
 
         if (consent == null) return setShowDialog(true);
-
-        if (consent) {
-            setShowDialog(false);
-
-            //append script
-            const appendScript = () => {
-                const script = document.createElement('script');
-                script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_TAG}`;
-                script.async = true;
-                script.id = 'ga-script';
-                document.head.appendChild(script);
-            };
-
-            //append script
-            if (!document.getElementById('ga-script')) appendScript();
-        }
     }, [showDialog]);
 
     const handleConsentChange = (hasConsented: boolean) => {

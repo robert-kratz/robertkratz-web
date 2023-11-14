@@ -28,9 +28,16 @@ class MyDocument extends Document<MyDocumentProps> {
         return (
             <Html lang={this.props.locale}>
                 <Head>
-                    <script>
-                        {`window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', '${GA_TAG}');`}
-                    </script>
+                    <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TAG}`}></script>
+                    <script
+                        dangerouslySetInnerHTML={{
+                            __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GA_TAG}');
+              `,
+                        }}></script>
                     {locales?.map((lng) => {
                         const href = domainLocales?.find((d) => d.defaultLocale === lng)
                             ? `https://${lng}.${DOMAIN}${path}`
