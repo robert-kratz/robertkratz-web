@@ -27,7 +27,7 @@
     ],
     "contact.page": {
         "title": "Contact Me",
-        "subtitle": "Please feel free to contact me via email, LinkedIn or the contact form. Get your quote today!",
+        "subtitle": "Please feel free to contact me via email, LinkedIn or the contact form.",
         "landing-button.text": "Contact via E-Mail",
         "landing.button.url": "mailto:contact@rjks.us",
         "form": {

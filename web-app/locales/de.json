@@ -27,7 +27,7 @@
     ],
     "contact.page": {
         "title": "Kontakt aufnehmen",
-        "subtitle": "Kontaktieren Sie mich gerne via E-Mail, LinkedIn oder das Kontaktformular. Holen Sie sich heute Ihr Angebot!",
+        "subtitle": "Kontaktieren Sie mich gerne via E-Mail, LinkedIn oder das Kontaktformular.",
         "landing-button.text": "Kontakt via E-Mail",
         "landing.button.url": "mailto:contact@rjks.us",
         "form": {
