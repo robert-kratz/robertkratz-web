@@ -12,6 +12,7 @@ const nextConfig = {
         RECAPTCHA_SITE_KEY: process.env.RECAPTCHA_SITE_KEY || '',
         GA_TAG: process.env.GA_TAG || '',
         PAGE_NAME: process.env.PAGE_NAME || '',
+        PAGE_HOST: process.env.PAGE_HOST || '',
         DOMAIN: 'www.rjks.us',
     },
     serverRuntimeConfig: {

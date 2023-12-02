@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 
 const { publicRuntimeConfig } = getConfig();
 
-const { PAGE_NAME } = publicRuntimeConfig;
+const { PAGE_NAME, PAGE_HOST } = publicRuntimeConfig;
 
 export type PageMetaDataProps = {
     title: string;
@@ -19,6 +19,11 @@ export type PageMetaDataProps = {
 export default function PageMetaData({ title, description, image, url, keywords, author, date }: PageMetaDataProps) {
     const router = useRouter();
 
+    let currentUrl =
+        router.locale === router.defaultLocale
+            ? PAGE_HOST + router.asPath
+            : PAGE_HOST + '/' + router.locale + router.asPath;
+
     const metaChildren = [
         <title key="title">{title}</title>,
         <meta key="language" name="language" content={router.locale} />,
@@ -27,7 +32,8 @@ export default function PageMetaData({ title, description, image, url, keywords,
         <meta key="og:title" property="og:title" content={title} />,
         <meta key="og:description" property="og:description" content={description} />,
         <meta key="og:image" property="og:image" content={image} />,
-        <meta key="og:url" property="og:url" content={url} />,
+        <meta key="url" name="url" content={currentUrl} />,
+        <meta key="og:url" property="og:url" content={currentUrl} />,
         <meta key="og:site_name" property="og:site_name" content={PAGE_NAME} />,
         <meta key="twitter:card" property="twitter:card" content="summary_large_image" />,
         <meta key="twitter:title" property="twitter:title" content={title} />,
