@@ -1,8 +1,8 @@
 import getConfig from 'next/config';
 import { useEffect, useState } from 'react';
-import { getUserConsent, setUserConsent } from '../../../consentManager';
+import { getUserConsent, setUserConsent } from '../../../../consentManager';
 import ActionButton from '../button/ActionButton';
-import { useTranslation } from '../hooks/useTranslation';
+import { useTranslation } from '../../hooks/useTranslation';
 import TranslationElement from '../utils/TranslationElement';
 
 const { publicRuntimeConfig } = getConfig();

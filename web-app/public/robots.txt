@@ -10,5 +10,7 @@ Disallow: /privacy-policy
 Disallow: /de/legal-notice
 Disallow: /de/privacy-policy
 
+Disallow /crm/
+
 # Sitemaps
 Sitemap: https://www.rjks.us/sitemap.xml

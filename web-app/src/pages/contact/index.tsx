@@ -1,11 +1,11 @@
-import ActionButton from '@/components/button/ActionButton';
+import ActionButton from '@/components/website/button/ActionButton';
 import AnimateOnScroll from '@/components/hooks/AnimationOnScroll';
 import { useTranslation } from '@/components/hooks/useTranslation';
-import LimitedWidthArea from '@/components/layout/LimitedWidthArea';
-import PageLayout from '@/components/layout/PageLayout';
-import TextFieldInputElement from '@/components/utils/TextFieldInputElement';
-import TextInputElement from '@/components/utils/TextInputElement';
-import TranslationElement from '@/components/utils/TranslationElement';
+import LimitedWidthArea from '@/components/website/layout/LimitedWidthArea';
+import PageLayout from '@/components/website/layout/PageLayout';
+import TextFieldInputElement from '@/components/website/utils/TextFieldInputElement';
+import TextInputElement from '@/components/website/utils/TextInputElement';
+import TranslationElement from '@/components/website/utils/TranslationElement';
 import axios from 'axios';
 import getConfig from 'next/config';
 import Image from 'next/image';

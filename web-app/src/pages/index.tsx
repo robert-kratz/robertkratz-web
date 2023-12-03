@@ -1,13 +1,13 @@
 import Image from 'next/image';
-import PageLayout from '@/components/layout/PageLayout';
-import ActionButton from '../components/button/ActionButton';
-import LimitedWidthArea from '@/components/layout/LimitedWidthArea';
-import ScrollingWords from '@/components/HorizontalLinkSlider';
+import PageLayout from '@/components/website/layout/PageLayout';
+import ActionButton from '../components/website/button/ActionButton';
+import LimitedWidthArea from '@/components/website/layout/LimitedWidthArea';
+import ScrollingWords from '@/components/website/HorizontalLinkSlider';
 import { useTranslation } from '@/components/hooks/useTranslation';
 import AnimateOnScroll from '@/components/hooks/AnimationOnScroll';
-import TranslationElement from '@/components/utils/TranslationElement';
+import TranslationElement from '@/components/website/utils/TranslationElement';
 import Link from 'next/link';
-import ParallaxMouseMovement from '@/components/utils/ParallaxMouseMovement';
+import ParallaxMouseMovement from '@/components/website/utils/ParallaxMouseMovement';
 
 export default function Home() {
     const { t } = useTranslation();

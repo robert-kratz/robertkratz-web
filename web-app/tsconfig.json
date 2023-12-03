@@ -14,6 +14,7 @@
         "isolatedModules": true,
         "jsx": "preserve",
         "incremental": true,
+        "typeRoots": ["./node_modules/@types", "./types"],
         "paths": {
             "@/*": ["./src/*"]
         }
@@ -21,10 +22,12 @@
     "include": [
         "next-env.d.ts",
         "**/*.ts",
-        "**/*.tsx", // Include this if you have TypeScript React components
+        "**/*.tsx",
         "src/components/utils/TranslationElement.jsx",
-        "src/components/hooks/useTranslation.jsx",
-        "src/content/**/*"
+        "src/components/hooks/useTranslation.js",
+        "global.d.ts",
+        "src/content/**/*",
+        "./global.d.ts"
     ],
     "exclude": ["node_modules"]
 }

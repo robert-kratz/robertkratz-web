@@ -192,6 +192,7 @@
     "page-not-found.title": "Oops!",
     "page-not-found.subheading": "The page you were looking for could not be found or it no longer exists.",
     "page-not-found.button.1": "Back to home",
+    "page-not-found.button.1.href": "/",
     "internal-server-error.title": "Oops!!",
     "internal-server-error.subheading": "An error has occurred on our site. Please try again later.",
     "service.promo-contact.heading": "Your Wish <br/>comes First!",

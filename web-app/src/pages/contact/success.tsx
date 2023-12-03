@@ -1,4 +1,4 @@
-import ActionButton from '@/components/button/ActionButton';
+import ActionButton from '@/components/website/button/ActionButton';
 import AnimateOnScroll from '@/components/hooks/AnimationOnScroll';
 import { useTranslation } from '@/components/hooks/useTranslation';
 import PageLayout from '@/components/layout/PageLayout';

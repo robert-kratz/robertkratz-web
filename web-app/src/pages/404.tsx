@@ -1,5 +1,5 @@
 import { useTranslation } from '@/components/hooks/useTranslation';
-import PageNotFoundOverlay from '@/components/overlay/PageNotFoundOverlay';
+import PageNotFoundOverlay from '@/components/website/overlay/PageNotFoundOverlay';
 import Head from 'next/head';
 
 export default function PageNotFound() {

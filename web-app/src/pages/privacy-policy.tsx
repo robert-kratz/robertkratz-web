@@ -1,4 +1,4 @@
-import PageLayout from '@/components/layout/PageLayout';
+import PageLayout from '@/components/website/layout/PageLayout';
 
 import fs from 'fs';
 import ReactMarkdown from 'react-markdown';
@@ -8,7 +8,7 @@ import rehypeSanitize from 'rehype-sanitize';
 import { AnchorHTMLAttributes, ReactNode } from 'react';
 import Link from 'next/link';
 import path from 'path';
-import ParallaxMouseMovement from '@/components/utils/ParallaxMouseMovement';
+import ParallaxMouseMovement from '@/components/website/utils/ParallaxMouseMovement';
 import AnimateOnScroll from '@/components/hooks/AnimationOnScroll';
 import Head from 'next/head';
 import { useTranslation } from '@/components/hooks/useTranslation';

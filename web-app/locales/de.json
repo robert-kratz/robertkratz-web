@@ -192,6 +192,7 @@
     "page-not-found.title": "Hoppla!",
     "page-not-found.subheading": "Die von Ihnen gesuchte Seite konnte nicht gefunden werden, oder diese existiert nicht mehr.",
     "page-not-found.button.1": "Zurück zur Startseite",
+    "page-not-found.button.1.href": "/",
     "internal-server-error.title": "Hoppla!",
     "internal-server-error.subheading": "Es ist ein Fehler auf unserer Seite aufgetreten. Bitte versuchen Sie es später erneut.",
     "service.promo-contact.heading": "Ihr Wunsch an <br/>erster Stelle!",
