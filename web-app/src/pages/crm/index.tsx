@@ -17,8 +17,6 @@ type Props = {
 };
 
 export default function Dashboard({ session, user, token }: Props) {
-    console.log(session);
-
     return (
         <PageWrapper user={user} session={session}>
             <section className="flex justify-end items-center space-x-4">

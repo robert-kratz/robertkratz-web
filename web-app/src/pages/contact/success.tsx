@@ -1,9 +1,9 @@
 import ActionButton from '@/components/website/button/ActionButton';
 import AnimateOnScroll from '@/components/hooks/AnimationOnScroll';
 import { useTranslation } from '@/components/hooks/useTranslation';
-import PageLayout from '@/components/layout/PageLayout';
-import LandingSection from '@/components/structure/LandingSection';
-import TranslationElement from '@/components/utils/TranslationElement';
+import PageLayout from '@/components/website/layout/PageLayout';
+import LandingSection from '@/components/website/structure/LandingSection';
+import TranslationElement from '@/components/website/utils/TranslationElement';
 import Head from 'next/head';
 
 export default function ContactPage() {

@@ -34,6 +34,8 @@ export default function CrmTextInputField({
 }: Props) {
     const [error, setError] = useState(null);
 
+    const [showPassword, setShowPassword] = useState<boolean>(false);
+
     const ref = useRef(null);
 
     const validate = async (value: string) => {
@@ -50,7 +52,14 @@ export default function CrmTextInputField({
     return (
         <div className={`w-full space-y-2 ${className}`}>
             <label htmlFor={name} className="block text-sm font-medium text-gray-700 my-2">
-                {label}
+                {label}{' '}
+                {type === 'password' && (
+                    <span
+                        onClick={() => setShowPassword(!showPassword)}
+                        className="text-blue-500 text-right float-right">
+                        {showPassword ? 'SHOW' : 'HIDE'}
+                    </span>
+                )}
             </label>
             <input
                 onChange={(e) => {
@@ -60,7 +69,7 @@ export default function CrmTextInputField({
                 value={value ? value : type === 'number' ? 0 : ''}
                 min={0}
                 disabled={disabled}
-                type={type}
+                type={type === 'password' ? (showPassword ? 'text' : 'password') : type}
                 maxLength={maxLength}
                 autoComplete={autoComplete}
                 id={name}

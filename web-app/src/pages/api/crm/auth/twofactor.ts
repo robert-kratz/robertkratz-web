@@ -25,7 +25,7 @@ const handleTwoFactorToggleState = async (req: NextApiRequest, res: NextApiRespo
     try {
         handleTwoFactorToggleValidation(req.body);
 
-        const xClientState = req.cookies['x-client-state'];
+        const xClientState = req.cookies['x-client-state'] || req.headers['authorization'];
 
         if (!xClientState) throw new Error('Forbidden');
 
@@ -58,7 +58,7 @@ const handleTwoFactorVerification = async (req: NextApiRequest, res: NextApiResp
     try {
         handleTwoFactorValidation(req.body);
 
-        const xClientState = req.cookies['x-client-state'];
+        const xClientState = req.cookies['x-client-state'] || req.headers['authorization'];
 
         if (!xClientState) throw new Error('Forbidden');
 
@@ -94,7 +94,7 @@ const handleTwoFactorVerification = async (req: NextApiRequest, res: NextApiResp
 
 const handleTwoFactorConnectionToApp = async (req: NextApiRequest, res: NextApiResponse) => {
     try {
-        const xClientState = req.cookies['x-client-state'];
+        const xClientState = req.cookies['x-client-state'] || req.headers['authorization'];
 
         if (!xClientState) throw new Error('Forbidden');
 

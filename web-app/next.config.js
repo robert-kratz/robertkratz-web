@@ -6,7 +6,7 @@ const nextConfig = {
         defaultLocale: 'en',
     },
     images: {
-        domains: ['www.rjks.us', 'rjks.us'],
+        domains: ['www.rjks.us', 'rjks.us', 'chart.googleapis.com'],
     },
     publicRuntimeConfig: {
         RECAPTCHA_SITE_KEY: process.env.RECAPTCHA_SITE_KEY || '',

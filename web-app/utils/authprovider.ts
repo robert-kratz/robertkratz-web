@@ -11,7 +11,10 @@ type CustomPageProps = {
     [key: string]: any;
 };
 
-export async function useSession(context: NextPageContext, onAuthorize: (session: any) => Promise<CustomPageProps>) {
+export async function useSession(
+    context: NextPageContext,
+    onAuthorize: (session: any, token?: string) => Promise<CustomPageProps>
+) {
     const currentUrl = url.parse(context?.req?.url as string).pathname;
 
     const redirectToLogout = async (url: string, props?: any[]) => {
@@ -50,7 +53,7 @@ export async function useSession(context: NextPageContext, onAuthorize: (session
     // if (tokenDecode.token?.type === 'auth-token' && (currentUrl === '/crm/login' || currentUrl === '/crm/login/2fa'))
     //     return redirectToLogout('/crm');
 
-    let pageProps = await onAuthorize(tokenDecode);
+    let pageProps = await onAuthorize(tokenDecode, xClientState);
 
     if (pageProps.redirect) return redirectToLogout(pageProps.redirect.destination);
 
@@ -72,6 +75,7 @@ export async function useSession(context: NextPageContext, onAuthorize: (session
             user: dataCopy.user,
             session: dataCopy.session,
             token: dataCopy.token,
+            access: xClientState,
             ...pageProps,
         },
     };

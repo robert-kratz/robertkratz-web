@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from 'react';
 import { createToast } from 'vercel-toast';
 import * as yup from 'yup';
 import { useSession } from '../../../../utils/authprovider';
+import Head from 'next/head';
 
 const ValidationSchema = {
     email: yup.string().email('Please enter a valid E-Mail').required('E-Mail is required'),
@@ -119,6 +120,9 @@ export default function Login({}) {
     }, [utm_campaign]);
     return (
         <section className="bg-gray-50 min-h-screen h-full">
+            <Head>
+                <title>Login</title>
+            </Head>
             <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
                 <div className="w-full bg-white rounded-lg md:shadow-2xl border md:mt-0 sm:max-w-md xl:p-0">
                     <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
@@ -133,6 +137,7 @@ export default function Login({}) {
                                 label="E-Mail"
                                 name="email"
                                 placeholder="name@rjks.us"
+                                autoComplete="email"
                                 validation={ValidationSchema.email}
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}

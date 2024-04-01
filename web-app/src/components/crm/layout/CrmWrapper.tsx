@@ -31,8 +31,8 @@ export default function PageWrapper({ children, user, session, title = 'CRM' }: 
             <Head>
                 <title>{title}</title>
             </Head>
-            <main className="max-w-4xl pt-4 px-4 md:px-8">
-                <div className="mx-auto">{children}</div>
+            <main className="pt-4 px-4 md:px-8 flex justify-center">
+                <div className="mx-auto w-full max-w-6xl">{children}</div>
             </main>
         </div>
     );
