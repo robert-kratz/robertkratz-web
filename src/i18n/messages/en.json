@@ -1,0 +1,134 @@
+{
+  "meta": {
+    "title": "Robert Julian Kratz | Software Development & IT Consulting",
+    "description": "Freelance software developer, specializing in web applications, IT infrastructure and AI strategy for small and medium-sized businesses."
+  },
+  "nav": {
+    "hero": "Home",
+    "services": "Services",
+    "projects": "Projects",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Robert Julian Kratz",
+    "role": "Software Developer • Freelancer",
+    "description": "I build custom digital solutions for small and medium-sized businesses. As a student at the University of Mannheim, I combine academic knowledge with practical experience.",
+    "cta": "Start a Project",
+    "ctaSecondary": "Learn More"
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "What I can do for you",
+    "items": {
+      "software": {
+        "title": "Software Development",
+        "description": "Modern web and mobile applications using cutting-edge technologies. From concept to deployment."
+      },
+      "infrastructure": {
+        "title": "IT Infrastructure",
+        "description": "Server administration, cloud architectures and reliable hosting solutions for your business."
+      },
+      "architecture": {
+        "title": "System Architecture",
+        "description": "Scalable and maintainable system designs that grow with your business."
+      },
+      "security": {
+        "title": "IT Security",
+        "description": "Security audits, penetration testing and implementation of best practices to protect your data."
+      },
+      "aiStrategy": {
+        "title": "IT & AI Strategy",
+        "description": "Strategic consulting on digital transformation and integration of AI into your business processes."
+      },
+      "seo": {
+        "title": "SEO",
+        "description": "Search engine optimization for better visibility and more organic traffic on your website."
+      },
+      "maintenance": {
+        "title": "Maintenance & Support",
+        "description": "Live monitoring, proactive maintenance and fast support for your existing systems and applications. Updates, bug fixes, performance optimization and ongoing improvements to ensure your digital solutions run smoothly and efficiently."
+      }
+    }
+  },
+  "projects": {
+    "title": "Projects & Experience",
+    "subtitle": "My Journey",
+    "selectionHint": "A selection of my clients, projects and professional experience.",
+    "viewProject": "View Project",
+    "viewAll": "All Projects"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Latest Articles",
+    "readMore": "Read More",
+    "viewAll": "All Articles"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Let's work together",
+    "steps": {
+      "projectType": "Project Type",
+      "details": "Your Details",
+      "message": "Message"
+    },
+    "projectTypes": {
+      "web": "Web Development",
+      "mobile": "Mobile App",
+      "infrastructure": "IT Infrastructure",
+      "consulting": "Consulting",
+      "other": "Other"
+    },
+    "fields": {
+      "name": "Name",
+      "email": "Email",
+      "company": "Company (optional)",
+      "message": "Your Message",
+      "budget": "Budget Range"
+    },
+    "budgetOptions": {
+      "small": "< €5,000",
+      "medium": "€5,000 - €15,000",
+      "large": "€15,000 - €50,000",
+      "enterprise": "> €50,000",
+      "unknown": "Not sure yet"
+    },
+    "next": "Next",
+    "back": "Back",
+    "submit": "Submit",
+    "success": "Thank you! Your message has been sent. I'll get back to you shortly.",
+    "error": "Something went wrong. Please try again."
+  },
+  "footer": {
+    "imprint": "Imprint",
+    "privacy": "Privacy Policy",
+    "copyright": "All rights reserved.",
+    "openSource": "This website is open source — Edit on GitHub",
+    "madeWith": "Network Partners",
+    "cookieSettings": "Cookie Settings"
+  },
+  "cookies": {
+    "banner": "I use cookies to provide you with the best possible experience on my website. For more information, please see my",
+    "privacyLink": "Privacy Policy",
+    "settings": "Settings",
+    "rejectAll": "Necessary Only",
+    "acceptAll": "Accept All",
+    "settingsTitle": "Cookie Settings",
+    "necessary": "Necessary Cookies (always active)",
+    "necessaryDesc": "These cookies are required for the basic functions of the website.",
+    "analytics": "Analytics Cookies",
+    "analyticsDesc": "Help me understand how visitors interact with the website.",
+    "marketing": "Marketing Cookies",
+    "marketingDesc": "Used to show visitors relevant advertising.",
+    "back": "Back",
+    "saveSelection": "Save Selection"
+  },
+  "language": {
+    "switch": "DE",
+    "current": "EN"
+  },
+  "loading": {
+    "text": "Loading..."
+  }
+}

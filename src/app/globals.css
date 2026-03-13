@@ -9,6 +9,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-sans);
   --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-display);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -38,6 +39,13 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
+  --color-retro-orange: var(--retro-orange);
+  --color-retro-orange-foreground: var(--retro-orange-foreground);
+  --color-retro-blue: var(--retro-blue);
+  --color-retro-indigo: var(--retro-indigo);
+  --color-retro-metal: var(--retro-metal);
+  --color-retro-metal-light: var(--retro-metal-light);
+  --color-retro-metal-dark: var(--retro-metal-dark);
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
@@ -48,72 +56,277 @@
 }
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.809 0.105 251.813);
-  --chart-2: oklch(0.623 0.214 259.815);
-  --chart-3: oklch(0.546 0.245 262.881);
-  --chart-4: oklch(0.488 0.243 264.376);
-  --chart-5: oklch(0.424 0.199 265.638);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  /* Retro-Futurismus Light Mode Palette */
+  --background: #f0f0f2;
+  --foreground: #1a1a2e;
+  --card: #e8e8ec;
+  --card-foreground: #1a1a2e;
+  --popover: #e8e8ec;
+  --popover-foreground: #1a1a2e;
+  --primary: #3b5fcc;
+  --primary-foreground: #f0f0f2;
+  --secondary: #d4d4d8;
+  --secondary-foreground: #1a1a2e;
+  --muted: #d4d4d8;
+  --muted-foreground: #71717a;
+  --accent: #0D9488;
+  --accent-foreground: #ffffff;
+  --destructive: #dc2626;
+  --border: #c4c4ca;
+  --input: #c4c4ca;
+  --ring: #3b5fcc;
+
+  /* Retro Custom Colors */
+  --retro-orange: #0D9488;
+  --retro-orange-foreground: #ffffff;
+  --retro-blue: #4a9fe8;
+  --retro-indigo: #3b5fcc;
+  --retro-metal: #a1a1aa;
+  --retro-metal-light: #d4d4d8;
+  --retro-metal-dark: #71717a;
+
+  --chart-1: #4a9fe8;
+  --chart-2: #3b5fcc;
+  --chart-3: #0D9488;
+  --chart-4: #71717a;
+  --chart-5: #a1a1aa;
+  --radius: 0.375rem;
+  --sidebar: #e8e8ec;
+  --sidebar-foreground: #1a1a2e;
+  --sidebar-primary: #3b5fcc;
+  --sidebar-primary-foreground: #f0f0f2;
+  --sidebar-accent: #d4d4d8;
+  --sidebar-accent-foreground: #1a1a2e;
+  --sidebar-border: #c4c4ca;
+  --sidebar-ring: #3b5fcc;
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.809 0.105 251.813);
-  --chart-2: oklch(0.623 0.214 259.815);
-  --chart-3: oklch(0.546 0.245 262.881);
-  --chart-4: oklch(0.488 0.243 264.376);
-  --chart-5: oklch(0.424 0.199 265.638);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  /* Retro-Futurismus Dark Mode Palette */
+  --background: #0a0a0f;
+  --foreground: #e4e4e7;
+  --card: #141420;
+  --card-foreground: #e4e4e7;
+  --popover: #141420;
+  --popover-foreground: #e4e4e7;
+  --primary: #4a9fe8;
+  --primary-foreground: #0a0a0f;
+  --secondary: #1e1e2e;
+  --secondary-foreground: #e4e4e7;
+  --muted: #1e1e2e;
+  --muted-foreground: #71717a;
+  --accent: #2DD4BF;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --border: rgba(255, 255, 255, 0.1);
+  --input: rgba(255, 255, 255, 0.12);
+  --ring: #4a9fe8;
+
+  --retro-orange: #2DD4BF;
+  --retro-orange-foreground: #ffffff;
+  --retro-blue: #4a9fe8;
+  --retro-indigo: #5b7fec;
+  --retro-metal: #52525b;
+  --retro-metal-light: #71717a;
+  --retro-metal-dark: #3f3f46;
+
+  --chart-1: #4a9fe8;
+  --chart-2: #5b7fec;
+  --chart-3: #2DD4BF;
+  --chart-4: #71717a;
+  --chart-5: #52525b;
+  --sidebar: #141420;
+  --sidebar-foreground: #e4e4e7;
+  --sidebar-primary: #4a9fe8;
+  --sidebar-primary-foreground: #0a0a0f;
+  --sidebar-accent: #1e1e2e;
+  --sidebar-accent-foreground: #e4e4e7;
+  --sidebar-border: rgba(255, 255, 255, 0.1);
+  --sidebar-ring: #4a9fe8;
+}
+
+/* ===== RETRO-FUTURISM UTILITIES ===== */
+
+/* Brushed Aluminum Texture */
+.brushed-metal {
+  background: linear-gradient(
+    135deg,
+    var(--card) 0%,
+    color-mix(in srgb, var(--card) 90%, var(--foreground) 10%) 25%,
+    var(--card) 50%,
+    color-mix(in srgb, var(--card) 85%, var(--foreground) 15%) 75%,
+    var(--card) 100%
+  );
+  background-size: 200% 200%;
+}
+
+/* Metallic Border Gradient */
+.metallic-border {
+  border: 1px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+}
+.metallic-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(
+    135deg,
+    var(--retro-metal-light),
+    var(--retro-metal-dark),
+    var(--retro-metal-light)
+  );
+  z-index: -1;
+}
+
+/* 3D Pressed Button Effect */
+.retro-button-3d {
+  background: linear-gradient(180deg, var(--primary), color-mix(in srgb, var(--primary) 80%, black 20%));
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.3),
+    0 2px 4px -2px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  transition: all 0.15s ease;
+}
+.retro-button-3d:hover {
+  box-shadow:
+    0 6px 8px -1px rgba(0, 0, 0, 0.35),
+    0 3px 6px -2px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+.retro-button-3d:active {
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.3),
+    inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  transform: translateY(1px);
+}
+
+/* Orange Accent 3D Button */
+.retro-button-accent {
+  background: linear-gradient(180deg, var(--retro-orange), color-mix(in srgb, var(--retro-orange) 75%, black 25%));
+  color: #0a0a0f;
+  box-shadow:
+    0 4px 6px -1px rgba(13, 148, 136, 0.4),
+    0 2px 4px -2px rgba(13, 148, 136, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.15s ease;
+}
+.retro-button-accent:hover {
+  box-shadow:
+    0 6px 10px -1px rgba(13, 148, 136, 0.5),
+    0 3px 6px -2px rgba(13, 148, 136, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  transform: translateY(-1px);
+}
+.retro-button-accent:active {
+  box-shadow:
+    0 1px 2px rgba(13, 148, 136, 0.3),
+    inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  transform: translateY(1px);
+}
+.dark .retro-button-accent {
+  color: #0a0a0f;
+  box-shadow:
+    0 4px 6px -1px rgba(45, 212, 191, 0.4),
+    0 2px 4px -2px rgba(45, 212, 191, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+.dark .retro-button-accent:hover {
+  box-shadow:
+    0 6px 10px -1px rgba(45, 212, 191, 0.5),
+    0 3px 6px -2px rgba(45, 212, 191, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+.dark .retro-button-accent:active {
+  box-shadow:
+    0 1px 2px rgba(45, 212, 191, 0.3),
+    inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Retro Glow Effect */
+.retro-glow {
+  box-shadow: 0 0 15px rgba(74, 159, 232, 0.3), 0 0 30px rgba(74, 159, 232, 0.1);
+}
+.dark .retro-glow {
+  box-shadow: 0 0 20px rgba(74, 159, 232, 0.4), 0 0 40px rgba(74, 159, 232, 0.15);
+}
+
+/* Retro Card with metallic feel */
+.retro-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 1px 1px rgba(0, 0, 0, 0.03),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+.dark .retro-card {
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.4),
+    0 1px 2px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Retro Nieten (Rivets) Divider */
+.retro-divider {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+  height: 3px;
+  position: relative;
+}
+.retro-divider::before {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--retro-metal), var(--retro-metal-dark), var(--retro-metal));
+}
+.retro-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--retro-metal), var(--retro-metal-dark), var(--retro-metal), transparent);
+}
+
+/* Noise texture overlay */
+.noise-overlay::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  opacity: 0.03;
+  z-index: 9999;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar for retro look */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--retro-metal);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--retro-metal-dark);
+}
+
+/* Hide reCAPTCHA badge */
+.grecaptcha-badge {
+  visibility: hidden !important;
 }
 
 @layer base {

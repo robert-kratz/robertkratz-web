@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body style="background-color: #f2f2f2; margin: 0; padding: 0; font-family: 'Helvetica Neue', Arial, sans-serif">
+        <main style="max-width: 600px; margin: 0 auto; padding: 2rem; background-color: #ffffff">
+            <div style="border-bottom: 2px solid #1a1a1a; padding-bottom: 1rem; margin-bottom: 1.5rem">
+                <h1 style="font-size: 1.25rem; color: #1a1a1a; margin: 0">Neue Kontaktanfrage</h1>
+                <p style="font-size: 0.85rem; color: #6b7280; margin: 0.5rem 0 0 0">
+                    Empfangen: <strong>{{date}}</strong>
+                </p>
+            </div>
+
+            <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem; color: #1a202c">
+                <tr>
+                    <td style="padding: 0.6rem 0; border-bottom: 1px solid #e5e7eb; font-weight: 600; width: 140px; vertical-align: top">Name</td>
+                    <td style="padding: 0.6rem 0; border-bottom: 1px solid #e5e7eb">{{name}}</td>
+                </tr>
+                <tr>
+                    <td style="padding: 0.6rem 0; border-bottom: 1px solid #e5e7eb; font-weight: 600; vertical-align: top">E-Mail</td>
+                    <td style="padding: 0.6rem 0; border-bottom: 1px solid #e5e7eb">
+                        <a href="mailto:{{email}}" style="color: #2563eb; text-decoration: none">{{email}}</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 0.6rem 0; border-bottom: 1px solid #e5e7eb; font-weight: 600; vertical-align: top">Firma</td>
+                    <td style="padding: 0.6rem 0; border-bottom: 1px solid #e5e7eb">{{company}}</td>
+                </tr>
+                <tr>
+                    <td style="padding: 0.6rem 0; border-bottom: 1px solid #e5e7eb; font-weight: 600; vertical-align: top">Projekttyp</td>
+                    <td style="padding: 0.6rem 0; border-bottom: 1px solid #e5e7eb">{{projectType}}</td>
+                </tr>
+                <tr>
+                    <td style="padding: 0.6rem 0; border-bottom: 1px solid #e5e7eb; font-weight: 600; vertical-align: top">Budget</td>
+                    <td style="padding: 0.6rem 0; border-bottom: 1px solid #e5e7eb">{{budget}}</td>
+                </tr>
+                <tr>
+                    <td style="padding: 0.6rem 0; font-weight: 600; vertical-align: top">Nachricht</td>
+                    <td style="padding: 0.6rem 0">{{{messageHtml}}}</td>
+                </tr>
+            </table>
+
+            <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #e5e7eb; font-size: 0.8rem; color: #9ca3af">
+                <p style="margin: 0">IP: {{ip}} &middot; User-Agent: {{userAgent}} &middot; Sprache: {{locale}}</p>
+            </div>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,134 @@
+{
+  "meta": {
+    "title": "Robert Julian Kratz | Softwareentwicklung & IT-Beratung",
+    "description": "Freelance Softwareentwickler, spezialisiert auf Webanwendungen, IT-Infrastruktur und KI-Strategie für kleine und mittlere Unternehmen."
+  },
+  "nav": {
+    "hero": "Start",
+    "services": "Leistungen",
+    "projects": "Projekte",
+    "blog": "Blog",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "greeting": "Hallo, ich bin",
+    "name": "Robert Julian Kratz",
+    "role": "Softwareentwickler • Freelancer",
+    "description": "Ich entwickle maßgeschneiderte digitale Lösungen für kleine und mittlere Unternehmen. Als Student der Universität Mannheim verbinde ich akademisches Wissen mit praktischer Erfahrung.",
+    "cta": "Projekt starten",
+    "ctaSecondary": "Mehr erfahren"
+  },
+  "services": {
+    "title": "Leistungen",
+    "subtitle": "Was ich für Sie tun kann",
+    "items": {
+      "software": {
+        "title": "Softwareentwicklung",
+        "description": "Moderne Web- und Mobile-Anwendungen mit den neuesten Technologien. Von der Konzeption bis zum Deployment."
+      },
+      "infrastructure": {
+        "title": "IT-Infrastruktur",
+        "description": "Server-Administration, Cloud-Architekturen und zuverlässige Hosting-Lösungen für Ihr Unternehmen."
+      },
+      "architecture": {
+        "title": "Systemarchitektur",
+        "description": "Skalierbare und wartbare Systemdesigns, die mit Ihrem Unternehmen wachsen."
+      },
+      "security": {
+        "title": "IT-Sicherheit",
+        "description": "Sicherheitsaudits, Penetrationstests und Implementierung von Best Practices zum Schutz Ihrer Daten."
+      },
+      "aiStrategy": {
+        "title": "IT- & KI-Strategie",
+        "description": "Strategische Beratung zur digitalen Transformation und Integration von KI in Ihre Geschäftsprozesse."
+      },
+      "seo": {
+        "title": "SEO",
+        "description": "Suchmaschinenoptimierung für bessere Sichtbarkeit und mehr organischen Traffic auf Ihrer Website."
+      },
+      "maintenance": {
+        "title": "Instandhaltung & Support",
+        "description": "Live-Überwachung, proaktive Wartung und schneller Support für Ihre bestehenden Systeme und Anwendungen. Updates, Fehlerbehebungen, Leistungsoptimierung und kontinuierliche Verbesserungen, um sicherzustellen, dass Ihre digitalen Lösungen reibungslos und effizient laufen."
+      }
+    }
+  },
+  "projects": {
+    "title": "Projekte & Erfahrung",
+    "subtitle": "Mein Werdegang",
+    "selectionHint": "Eine Auswahl meiner Kunden, Projekte und beruflichen Stationen.",
+    "viewProject": "Projekt ansehen",
+    "viewAll": "Alle Projekte"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Neueste Artikel",
+    "readMore": "Weiterlesen",
+    "viewAll": "Alle Artikel"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Lassen Sie uns zusammenarbeiten",
+    "steps": {
+      "projectType": "Projekttyp",
+      "details": "Ihre Daten",
+      "message": "Nachricht"
+    },
+    "projectTypes": {
+      "web": "Webentwicklung",
+      "mobile": "Mobile App",
+      "infrastructure": "IT-Infrastruktur",
+      "consulting": "Beratung",
+      "other": "Sonstiges"
+    },
+    "fields": {
+      "name": "Name",
+      "email": "E-Mail",
+      "company": "Firma (optional)",
+      "message": "Ihre Nachricht",
+      "budget": "Budget-Rahmen"
+    },
+    "budgetOptions": {
+      "small": "< 5.000 €",
+      "medium": "5.000 - 15.000 €",
+      "large": "15.000 - 50.000 €",
+      "enterprise": "> 50.000 €",
+      "unknown": "Noch unklar"
+    },
+    "next": "Weiter",
+    "back": "Zurück",
+    "submit": "Absenden",
+    "success": "Vielen Dank! Ihre Nachricht wurde gesendet. Ich melde mich in Kürze bei Ihnen.",
+    "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
+  },
+  "footer": {
+    "imprint": "Impressum",
+    "privacy": "Datenschutz",
+    "copyright": "Alle Rechte vorbehalten.",
+    "openSource": "Diese Website ist Open Source — Auf GitHub bearbeiten",
+    "madeWith": "Netzwerkpartner",
+    "cookieSettings": "Cookie-Einstellungen"
+  },
+  "cookies": {
+    "banner": "Ich verwende Cookies, um Ihnen die bestmögliche Erfahrung auf meiner Website zu bieten. Weitere Informationen finden Sie in meiner",
+    "privacyLink": "Datenschutzerklärung",
+    "settings": "Einstellungen",
+    "rejectAll": "Nur Notwendige",
+    "acceptAll": "Alle akzeptieren",
+    "settingsTitle": "Cookie-Einstellungen",
+    "necessary": "Notwendige Cookies (immer aktiv)",
+    "necessaryDesc": "Diese Cookies sind für die Grundfunktionen der Website erforderlich.",
+    "analytics": "Analyse-Cookies",
+    "analyticsDesc": "Helfen mir zu verstehen, wie Besucher mit der Website interagieren.",
+    "marketing": "Marketing-Cookies",
+    "marketingDesc": "Werden verwendet, um Besuchern relevante Werbung anzuzeigen.",
+    "back": "Zurück",
+    "saveSelection": "Auswahl speichern"
+  },
+  "language": {
+    "switch": "EN",
+    "current": "DE"
+  },
+  "loading": {
+    "text": "Wird geladen..."
+  }
+}
