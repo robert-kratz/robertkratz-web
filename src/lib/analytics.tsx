@@ -1,28 +1,15 @@
 "use client";
 
-import React, {
-    createContext,
-    useContext,
-    useCallback,
-    useState,
-    useEffect,
-    ReactNode,
-    Suspense,
-} from "react";
+import React, { createContext, useContext, useCallback, useState, useEffect, ReactNode, Suspense } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import Script from "next/script";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
 import Link from "next/link";
-import {
-    GAEvent,
-    ConsentSettings,
-    GtagConsentUpdate,
-} from "@/lib/analytics-types";
+import { GAEvent, ConsentSettings, GtagConsentUpdate } from "@/lib/analytics-types";
 import { Switch } from "@/components/ui/switch";
 
-const GA_MEASUREMENT_ID =
-    process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-1VP6CHSC2R";
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-1VP6CHSC2R";
 const CONSENT_STORAGE_KEY = "cookie_consent_settings";
 
 // --- CONTEXT INTERFACE ---
@@ -37,9 +24,7 @@ interface AnalyticsContextType {
     trackEvent: (event: GAEvent) => void;
 }
 
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
-    undefined,
-);
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
 // --- PAGE TRACKING COMPONENT ---
 function PageTracker() {
@@ -49,9 +34,7 @@ function PageTracker() {
     useEffect(() => {
         if (typeof window === "undefined" || !window.gtag) return;
 
-        const url =
-            pathname +
-            (searchParams?.toString() ? `?${searchParams.toString()}` : "");
+        const url = pathname + (searchParams?.toString() ? `?${searchParams.toString()}` : "");
 
         window.gtag("event", "page_view", {
             page_path: pathname,
@@ -65,8 +48,7 @@ function PageTracker() {
 
 // --- PROVIDER COMPONENT ---
 export function AnalyticsProvider({ children }: { children: ReactNode }) {
-    const [consentSettings, setConsentSettings] =
-        useState<ConsentSettings | null>(null);
+    const [consentSettings, setConsentSettings] = useState<ConsentSettings | null>(null);
     const [isInitialized, setIsInitialized] = useState(false);
 
     const updateGtagConsent = useCallback((settings: ConsentSettings) => {
@@ -182,10 +164,7 @@ export function GoogleAnalyticsScript() {
 
     return (
         <>
-            <Script
-                src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-                strategy="lazyOnload"
-            />
+            <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} strategy="lazyOnload" />
             <Script id="gtag-init" strategy="lazyOnload">
                 {`
           window.dataLayer = window.dataLayer || [];
@@ -213,8 +192,7 @@ export function GoogleAnalyticsScript() {
 
 // --- COOKIE BANNER COMPONENT ---
 export function CookieBanner() {
-    const { hasConsented, isInitialized, acceptAll, rejectAll, saveConsent } =
-        useAnalytics();
+    const { hasConsented, isInitialized, acceptAll, rejectAll, saveConsent } = useAnalytics();
     const t = useTranslations("cookies");
     const locale = useLocale();
     const [showDetails, setShowDetails] = useState(false);

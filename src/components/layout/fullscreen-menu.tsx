@@ -59,7 +59,10 @@ export function FullscreenMenu() {
                                     <Link
                                         href={`/${locale}${item.href === "/" ? "" : item.href}`}
                                         onClick={() => {
-                                            trackEvent({ name: "menu_link_click", params: { label: item.labelEn, href: item.href } });
+                                            trackEvent({
+                                                name: "menu_link_click",
+                                                params: { label: item.labelEn, href: item.href },
+                                            });
                                             close();
                                         }}
                                         className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-primary-foreground hover:opacity-70 transition-opacity duration-200 leading-tight block py-1"
@@ -84,7 +87,10 @@ export function FullscreenMenu() {
                                 <Link
                                     href={`/${locale}/#contact`}
                                     onClick={() => {
-                                        trackEvent({ name: "menu_link_click", params: { label: "contact", href: "/#contact" } });
+                                        trackEvent({
+                                            name: "menu_link_click",
+                                            params: { label: "contact", href: "/#contact" },
+                                        });
                                         close();
                                     }}
                                     className="font-display font-semibold text-sm text-primary-foreground tracking-wider hover:opacity-70 transition-opacity"

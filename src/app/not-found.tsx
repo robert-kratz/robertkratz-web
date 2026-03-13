@@ -15,17 +15,11 @@ export default function NotFound() {
                     }}
                 />
 
-                <p className="font-mono text-xs tracking-widest uppercase text-retro-orange mb-4">
-                    {"// "}Error 404
-                </p>
+                <p className="font-mono text-xs tracking-widest uppercase text-retro-orange mb-4">{"// "}Error 404</p>
 
-                <h1 className="font-display text-6xl md:text-8xl font-bold tracking-tight text-foreground mb-4">
-                    404
-                </h1>
+                <h1 className="font-display text-6xl md:text-8xl font-bold tracking-tight text-foreground mb-4">404</h1>
 
-                <p className="text-muted-foreground mb-8">
-                    Die gesuchte Seite existiert nicht oder wurde verschoben.
-                </p>
+                <p className="text-muted-foreground mb-8">Die gesuchte Seite existiert nicht oder wurde verschoben.</p>
 
                 <Link
                     href="/"

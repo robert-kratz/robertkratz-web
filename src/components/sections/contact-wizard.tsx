@@ -80,7 +80,10 @@ function ContactWizardInner() {
 
             if (res.ok) {
                 setStatus("success");
-                trackEvent({ name: "wizard_submit", params: { project_type: projectType || "", budget: formData.budget || "none" } });
+                trackEvent({
+                    name: "wizard_submit",
+                    params: { project_type: projectType || "", budget: formData.budget || "none" },
+                });
             } else {
                 setStatus("error");
                 trackEvent({ name: "wizard_submit_error", params: { project_type: projectType || "" } });
@@ -332,7 +335,10 @@ function ContactWizardInner() {
                                 <button
                                     onClick={() => {
                                         setStep(step + 1);
-                                        trackEvent({ name: "wizard_step", params: { direction: "next", step: step + 1 } });
+                                        trackEvent({
+                                            name: "wizard_step",
+                                            params: { direction: "next", step: step + 1 },
+                                        });
                                     }}
                                     disabled={!canProceed()}
                                     className="retro-button-3d px-6 py-3 rounded-lg font-display font-semibold tracking-wider text-sm text-primary-foreground flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"

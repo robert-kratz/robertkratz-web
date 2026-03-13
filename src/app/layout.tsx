@@ -5,9 +5,7 @@ export const metadata: Metadata = {
     description:
         "Freelance Softwareentwickler, spezialisiert auf Webanwendungen, IT-Infrastruktur und KI-Strategie für kleine und mittlere Unternehmen.",
     icons: {
-        icon: [
-            { url: "/logo-dark.png", type: "image/png" },
-        ],
+        icon: [{ url: "/logo-dark.png", type: "image/png" }],
         apple: "/logo-dark.png",
     },
 };

@@ -83,10 +83,7 @@ export function Footer() {
                             </a>
                         </span>
                         <span className="text-muted-foreground/30">·</span>
-                        <button
-                            onClick={resetConsent}
-                            className="hover:text-primary transition-colors"
-                        >
+                        <button onClick={resetConsent} className="hover:text-primary transition-colors">
                             {t("cookieSettings")}
                         </button>
                     </div>
