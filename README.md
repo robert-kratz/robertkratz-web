@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# robertkratz-web
+
+Personal portfolio & freelance website built with Next.js 16, TypeScript and Tailwind CSS.
+
+## Tech Stack
+
+- **Framework:** Next.js 16 (App Router, Turbopack)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS 4, shadcn/ui
+- **Animations:** Framer Motion
+- **i18n:** next-intl (DE / EN)
+- **Analytics:** Google Analytics (Consent Mode v2)
+- **Email:** Nodemailer + Handlebars templates
+- **Package Manager:** pnpm
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 22+
+- pnpm
+
+### Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/robert-kratz/robertkratz-web.git
+cd robertkratz-web
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Environment Variables
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Copy the example file and fill in the values:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+cp .env.example .env.local
+```
 
-## Learn More
+| Variable                         | Description                          |
+| -------------------------------- | ------------------------------------ |
+| `SMTP_HOST`                      | SMTP server host                     |
+| `SMTP_PORT`                      | SMTP port (default: 587)             |
+| `SMTP_SECURE`                    | Use TLS (default: false)             |
+| `SMTP_USER`                      | SMTP username                        |
+| `SMTP_PASS`                      | SMTP password                        |
+| `SMTP_FROM`                      | Sender email address                 |
+| `CONTACT_EMAIL`                  | Recipient for contact form           |
+| `NEXT_PUBLIC_RECAPTCHA_SITE_KEY` | reCAPTCHA v3 site key                |
+| `RECAPTCHA_SECRET_KEY`           | reCAPTCHA v3 secret key              |
+| `NEXT_PUBLIC_SITE_URL`           | Public site URL (for sitemap/robots) |
+| `NEXT_PUBLIC_GA_MEASUREMENT_ID`  | Google Analytics Measurement ID      |
 
-To learn more about Next.js, take a look at the following resources:
+### Development
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+pnpm dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Open [http://localhost:3000](http://localhost:3000).
 
-## Deploy on Vercel
+### Build
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+pnpm build
+pnpm start
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Docker
+
+```bash
+docker build -t robertkratz-web .
+docker run -p 3000:3000 --env-file .env.local robertkratz-web
+```
+
+## Project Structure
+
+```
+src/
+├── app/               # Next.js App Router pages & layouts
+│   ├── [locale]/      # Localized pages (de/en)
+│   └── api/           # API routes
+├── components/
+│   ├── effects/       # Visual effects (cursor, parallax, tilt)
+│   ├── layout/        # Layout components (footer, menu, nav)
+│   ├── sections/      # Page sections (hero, services, contact)
+│   ├── shared/        # Shared components
+│   └── ui/            # UI primitives (button, input, switch)
+├── i18n/              # Internationalization config & messages
+└── lib/               # Utilities & analytics
+```
+
+## License
+
+All rights reserved.
