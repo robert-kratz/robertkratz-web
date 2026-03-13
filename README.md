@@ -1,63 +1,36 @@
-# rjks.us Website (rjks-website-new)
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-This is the New Portfolio Website of Robert Julian Kratz (rjks.us)
+## Getting Started
 
-## Installation
-
-Clone the repository
+First, run the development server:
 
 ```bash
-git clone https://github.com/robert-kratz/robertkratz-web.git
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-```bash
-cd web-app
-```
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Use the package manager [npm](https://www.npmjs.com/) to install the dependencies.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-```
-npm install
-```
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-Copy the .env.example file to .env and fill in the variables
+## Learn More
 
-```bash
-cp .env.example .env
-```
+To learn more about Next.js, take a look at the following resources:
 
-Please fill in the variables in the .env file
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-```
-nano .env
-```
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-And fill in the following variables: (Only required if you want to use the contact form)
+## Deploy on Vercel
 
-```
-RECAPTCHA_SITE_KEY=YOUR_RECAPTCHA_SITE_KEY
-RECAPTCHA_SECRET_KEY=YOUR_RECAPTCHA_SECRET_KEY
-SENDGRID_API_KEY=YOUR_SENDGRID_API_KEY
-```
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Make Sure the `EMAIL_TEMPLATES` in `next.config.js` is set to the correct SendGrid Template ID's
-
-## Start Application
-
-```bash
-npm run build
-```
-
-And start the application
-
-```bash
-npm run start
-```
-
-Alternatively you can run the application in production mode with `pm2` on port 8000 with the following command:
-
-```bash
-pm2 start npm --name "rjks-website-new" -- start -- -p 8000
-```
-
-Thank you for using my Portfolio Website!
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
