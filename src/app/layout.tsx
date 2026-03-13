@@ -36,7 +36,7 @@ export default function RootLayout({
     return (
         <html lang="de" suppressHydrationWarning>
             <body
-                className={`${oswald.variable} ${inter.variable} ${geistMono.variable} font-sans antialiased noise-overlay dark`}
+                className={`${oswald.variable} ${inter.variable} ${geistMono.variable} font-sans antialiased noise-overlay`}
             >
                 {children}
             </body>

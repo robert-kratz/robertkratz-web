@@ -8,6 +8,7 @@ import { CursorSpotlight } from "@/components/effects/cursor-spotlight";
 import { PageNavigationProvider } from "@/components/layout/page-navigation-context";
 import { FullscreenMenu } from "@/components/layout/fullscreen-menu";
 import { ScrollToTop } from "@/components/layout/scroll-to-top";
+import { Logo } from "@/components/layout/logo";
 import { AnalyticsProvider, GoogleAnalyticsScript, CookieBanner } from "@/lib/analytics";
 
 export default async function LocaleLayout({
@@ -33,6 +34,7 @@ export default async function LocaleLayout({
                         <ScrollToTop />
                         <GoogleAnalyticsScript />
                         <CursorSpotlight />
+                        <Logo />
                         <SideNavigation />
                         <FloatingLanguageSwitcher />
                         <FullscreenMenu />
