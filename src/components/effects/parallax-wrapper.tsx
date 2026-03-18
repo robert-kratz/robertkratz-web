@@ -19,7 +19,7 @@ export function ParallaxWrapper({ children, className = "", offset = 50 }: Paral
     const y = useTransform(scrollYProgress, [0, 1], [offset, -offset]);
 
     return (
-        <div ref={ref} className={className}>
+        <div ref={ref} className={`relative ${className}`}>
             <motion.div style={{ y }}>{children}</motion.div>
         </div>
     );

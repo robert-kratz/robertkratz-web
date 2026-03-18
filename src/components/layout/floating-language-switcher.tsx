@@ -31,7 +31,7 @@ export function FloatingLanguageSwitcher() {
             className="fixed bottom-6 right-6 z-40 p-2 rounded-lg retro-card transition-all duration-300 hover:retro-glow"
             aria-label={`Switch to ${targetLabel}`}
         >
-            <Image src={targetFlag} alt={targetLabel} width={24} height={24} />
+            <Image src={targetFlag} alt={targetLabel} width={24} height={24} style={{ width: "24px", height: "auto" }} />
         </motion.button>
     );
 }

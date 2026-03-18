@@ -24,7 +24,7 @@ export function SectionWrapper({ children, className = "", id }: SectionWrapperP
             ref={ref}
             id={id}
             style={{ opacity, y }}
-            className={`py-20 md:py-32 px-4 md:px-8 max-w-7xl mx-auto ${className}`}
+            className={`relative py-20 md:py-32 px-4 md:px-8 max-w-7xl mx-auto ${className}`}
         >
             {children}
         </motion.div>

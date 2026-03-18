@@ -3,6 +3,8 @@ import createNextIntlPlugin from "next-intl/plugin";
 
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
+const isDev = process.env.NODE_ENV === "development";
+
 const nextConfig: NextConfig = {
     output: "standalone",
     reactCompiler: true,
@@ -43,7 +45,7 @@ const nextConfig: NextConfig = {
                         key: "Content-Security-Policy",
                         value: [
                             "default-src 'self'",
-                            "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google.com https://www.gstatic.com",
+                            `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""} https://www.googletagmanager.com https://www.google.com https://www.gstatic.com`,
                             "style-src 'self' 'unsafe-inline'",
                             "img-src 'self' data: https:",
                             "font-src 'self' data:",

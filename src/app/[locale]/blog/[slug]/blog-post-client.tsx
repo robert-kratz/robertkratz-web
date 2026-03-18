@@ -1,10 +1,12 @@
 "use client";
 
 import { useTranslations, useLocale } from "next-intl";
+import { useRef, useState, useCallback, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
-import { ArrowLeft } from "lucide-react";
+import { motion, useScroll } from "framer-motion";
+import { ArrowLeft, Link2, Check, Share2, Mail } from "lucide-react";
+import { MarkdownRenderer } from "@/components/shared/markdown-renderer";
 import { SetPageSections } from "@/components/layout/set-page-sections";
 import { ContactWizard } from "@/components/sections/contact-wizard";
 import { TiltCard } from "@/components/effects/tilt-card";
@@ -29,6 +31,20 @@ const blogSectionsEn = [
 export default function BlogPostClient({ slug }: { slug: string }) {
     const t = useTranslations("blog");
     const locale = useLocale();
+    const articleRef = useRef<HTMLElement>(null);
+    const [copied, setCopied] = useState(false);
+    const [articleUrl, setArticleUrl] = useState("");
+    const [canNativeShare, setCanNativeShare] = useState(false);
+
+    useEffect(() => {
+        setArticleUrl(window.location.href);
+        setCanNativeShare(typeof navigator.share === "function");
+    }, []);
+
+    const { scrollYProgress } = useScroll({
+        target: articleRef,
+        offset: ["start center", "end center"],
+    });
 
     const post = blogPosts.find((p) => p.slug === slug) || blogPosts[0];
     const otherPosts = blogPosts.filter((p) => p.slug !== slug);
@@ -36,9 +52,98 @@ export default function BlogPostClient({ slug }: { slug: string }) {
     const content = locale === "en" ? post.content.en : post.content.de;
     const sections = locale === "en" ? blogSectionsEn : blogSections;
 
+    const handleCopyLink = useCallback(() => {
+        navigator.clipboard.writeText(window.location.href);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+    }, []);
+
+    const handleNativeShare = useCallback(() => {
+        if (navigator.share) {
+            navigator.share({ title, url: window.location.href }).catch((err) => {
+                if (err?.name !== "AbortError") console.error(err);
+            });
+        }
+    }, [title]);
+
+    const shareBar = (
+        <div className="flex items-center gap-3 flex-wrap">
+            {/* Copy Link */}
+            <button
+                onClick={handleCopyLink}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-mono retro-card hover:border-primary/50 hover:bg-primary/[0.03] transition-all duration-300 cursor-pointer"
+            >
+                {copied ? <Check size={15} className="text-retro-orange" /> : <Link2 size={15} />}
+                {copied
+                    ? (locale === "de" ? "Kopiert!" : "Copied!")
+                    : (locale === "de" ? "Link kopieren" : "Copy Link")
+                }
+            </button>
+
+            {/* X / Twitter */}
+            <a
+                href={`https://x.com/intent/tweet?url=${encodeURIComponent(articleUrl)}&text=${encodeURIComponent(title)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-mono retro-card hover:border-primary/50 hover:bg-primary/[0.03] transition-all duration-300"
+            >
+                <svg viewBox="0 0 24 24" fill="currentColor" className="w-[15px] h-[15px]"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
+                X
+            </a>
+
+            {/* LinkedIn */}
+            <a
+                href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(articleUrl)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-mono retro-card hover:border-primary/50 hover:bg-primary/[0.03] transition-all duration-300"
+            >
+                <svg viewBox="0 0 24 24" fill="currentColor" className="w-[15px] h-[15px]"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>
+                LinkedIn
+            </a>
+
+            {/* Email */}
+            <a
+                href={`mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(articleUrl)}`}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-mono retro-card hover:border-primary/50 hover:bg-primary/[0.03] transition-all duration-300"
+            >
+                <Mail size={15} />
+                E-Mail
+            </a>
+
+            {/* Native Share (mobile) */}
+            {canNativeShare && (
+                <button
+                    onClick={handleNativeShare}
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-mono retro-card hover:border-primary/50 hover:bg-primary/[0.03] transition-all duration-300 cursor-pointer"
+                >
+                    <Share2 size={15} />
+                    {locale === "de" ? "Teilen" : "Share"}
+                </button>
+            )}
+        </div>
+    );
+
     return (
         <>
             <SetPageSections sections={sections} />
+
+            {/* Reading progress bar */}
+            <div className="fixed top-0 left-0 right-0 z-50 h-1.5 bg-muted/50 backdrop-blur-sm">
+                <motion.div
+                    className="h-full origin-left"
+                    style={{
+                        scaleX: scrollYProgress,
+                        background: "linear-gradient(90deg, var(--retro-orange), var(--primary))",
+                        boxShadow: "0 0 8px var(--retro-orange), 0 0 16px rgba(from var(--retro-orange) r g b / 0.3)",
+                    }}
+                />
+                {/* Retro rivet accents */}
+                <div className="absolute top-0 left-0 right-0 h-full pointer-events-none" style={{
+                    borderBottom: "1px solid var(--retro-metal-dark)",
+                    borderTop: "1px solid var(--retro-metal-light)",
+                }} />
+            </div>
 
             {/* Hero section */}
             <section id="article-hero" className="relative min-h-[60vh] flex items-end overflow-hidden">
@@ -93,6 +198,19 @@ export default function BlogPostClient({ slug }: { slug: string }) {
                         <p className="mt-6 text-lg text-muted-foreground max-w-2xl leading-relaxed">
                             {locale === "en" ? post.excerptEn : post.excerpt}
                         </p>
+
+                        {post.tags && post.tags.length > 0 && (
+                            <div className="flex flex-wrap gap-2 mt-6">
+                                {post.tags.map((tag) => (
+                                    <span
+                                        key={tag}
+                                        className="px-2.5 py-1 text-xs rounded-md bg-muted text-muted-foreground font-mono border border-border"
+                                    >
+                                        #{tag}
+                                    </span>
+                                ))}
+                            </div>
+                        )}
                     </motion.div>
                 </div>
             </section>
@@ -112,20 +230,39 @@ export default function BlogPostClient({ slug }: { slug: string }) {
             )}
 
             {/* Article content */}
-            <section id="article-content" className="py-16 md:py-24">
+            <section id="article-content" ref={articleRef} className="relative py-16 md:py-24">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     className="max-w-3xl mx-auto px-4 md:px-8"
                 >
+                    {/* Share bar top */}
+                    <div className="mb-6">
+                        <span className="inline-block text-retro-orange font-mono text-xs tracking-widest uppercase mb-3">
+                            {"// "}
+                            {locale === "de" ? "Artikel teilen" : "Share Article"}
+                        </span>
+                        {shareBar}
+                    </div>
+
                     <article className="retro-card rounded-xl p-8 md:p-12">
-                        <div className="prose prose-lg max-w-none text-foreground/80 leading-relaxed space-y-6">
-                            {content.split("\n\n").map((paragraph, i) => (
-                                <p key={i}>{paragraph}</p>
-                            ))}
-                        </div>
+                        <MarkdownRenderer content={content} />
                     </article>
+
+                    {/* Share bar bottom */}
+                    <div className="mt-8 retro-card rounded-xl p-6">
+                        <span className="inline-block text-retro-orange font-mono text-xs tracking-widest uppercase mb-3">
+                            {"// "}
+                            {locale === "de" ? "Hat Ihnen der Artikel gefallen?" : "Enjoyed this article?"}
+                        </span>
+                        <p className="text-sm text-muted-foreground mb-4">
+                            {locale === "de"
+                                ? "Teilen Sie den Artikel mit Ihrem Netzwerk."
+                                : "Share the article with your network."}
+                        </p>
+                        {shareBar}
+                    </div>
                 </motion.div>
             </section>
 

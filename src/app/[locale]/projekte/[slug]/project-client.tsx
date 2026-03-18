@@ -4,6 +4,7 @@ import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowLeft, ExternalLink, Github } from "lucide-react";
+import { MarkdownRenderer } from "@/components/shared/markdown-renderer";
 import { SetPageSections } from "@/components/layout/set-page-sections";
 import { ContactWizard } from "@/components/sections/contact-wizard";
 import { TiltCard } from "@/components/effects/tilt-card";
@@ -136,11 +137,7 @@ export default function ProjectClient({ slug }: { slug: string }) {
                     className="max-w-3xl mx-auto px-4 md:px-8"
                 >
                     <article className="retro-card rounded-xl p-8 md:p-12">
-                        <div className="prose prose-lg max-w-none text-foreground/80 leading-relaxed space-y-6">
-                            {content.split("\n\n").map((paragraph, i) => (
-                                <p key={i}>{paragraph}</p>
-                            ))}
-                        </div>
+                        <MarkdownRenderer content={content} />
                     </article>
                 </motion.div>
             </section>
