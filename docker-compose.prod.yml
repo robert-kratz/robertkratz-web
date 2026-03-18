@@ -2,6 +2,7 @@ services:
   web:
     image: 'ghcr.io/robert-kratz/robertkratz-web:latest'
     restart: unless-stopped
+    pull_policy: always
     expose:
       - '3000' # Replaced "ports" with "expose"
     labels:
