@@ -60,7 +60,7 @@ export function SideNavigation() {
                 initial={{ x: -60, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: 1.5, duration: 0.6 }}
-                className="fixed left-4 top-1/2 -translate-y-1/2 z-40 hidden lg:flex flex-col items-center gap-4"
+                className="fixed left-4 top-1/2 -translate-y-1/2 z-30 hidden 2xl:flex flex-col items-center gap-4"
             >
                 {/* Nav dots */}
                 <div className="flex flex-col items-center gap-3 p-3 rounded-xl retro-card">
@@ -119,7 +119,7 @@ export function SideNavigation() {
                 initial={{ y: -40, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 1.5, duration: 0.6 }}
-                className="fixed top-0 left-0 right-0 z-40 flex lg:hidden justify-center py-3"
+                className="fixed top-0 left-0 right-0 z-30 flex 2xl:hidden justify-center py-3"
             >
                 <div className="flex items-center gap-3 px-4 py-2 rounded-b-xl retro-card backdrop-blur-sm bg-card/80">
                     {sections.map((section) => (
@@ -142,7 +142,7 @@ export function SideNavigation() {
                 initial={{ y: 40, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 1.5, duration: 0.6 }}
-                className="fixed bottom-0 left-0 right-0 z-40 flex lg:hidden justify-center pb-3"
+                className="fixed bottom-0 left-0 right-0 z-30 flex 2xl:hidden justify-center pb-3"
             >
                 <div className="flex items-center gap-2 px-4 py-2 rounded-t-xl retro-card backdrop-blur-sm bg-card/80">
                     <SocialLinks iconSize={18} />

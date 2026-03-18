@@ -129,20 +129,11 @@ export default function BlogPostClient({ slug }: { slug: string }) {
             <SetPageSections sections={sections} />
 
             {/* Reading progress bar */}
-            <div className="fixed top-0 left-0 right-0 z-50 h-1.5 bg-muted/50 backdrop-blur-sm">
+            <div className="fixed top-0 left-0 right-0 z-50 h-0.5 bg-muted/30">
                 <motion.div
-                    className="h-full origin-left"
-                    style={{
-                        scaleX: scrollYProgress,
-                        background: "linear-gradient(90deg, var(--retro-orange), var(--primary))",
-                        boxShadow: "0 0 8px var(--retro-orange), 0 0 16px rgba(from var(--retro-orange) r g b / 0.3)",
-                    }}
+                    className="h-full origin-left bg-primary"
+                    style={{ scaleX: scrollYProgress }}
                 />
-                {/* Retro rivet accents */}
-                <div className="absolute top-0 left-0 right-0 h-full pointer-events-none" style={{
-                    borderBottom: "1px solid var(--retro-metal-dark)",
-                    borderTop: "1px solid var(--retro-metal-light)",
-                }} />
             </div>
 
             {/* Hero section */}

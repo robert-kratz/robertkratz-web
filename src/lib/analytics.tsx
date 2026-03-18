@@ -213,7 +213,7 @@ export function CookieBanner() {
     };
 
     return (
-        <div className="fixed bottom-4 left-4 right-4 md:left-auto md:right-6 md:bottom-6 md:max-w-sm z-30 retro-card bg-card/95 backdrop-blur-md shadow-depth-lg">
+        <div className="fixed bottom-4 left-4 right-4 md:left-auto md:right-6 md:bottom-6 md:max-w-sm z-40 retro-card bg-card/95 backdrop-blur-md shadow-depth-lg">
             {!showDetails ? (
                 <div className="p-4 space-y-3">
                     <p className="text-xs text-muted-foreground leading-relaxed">
