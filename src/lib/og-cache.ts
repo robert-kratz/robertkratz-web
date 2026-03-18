@@ -2,7 +2,7 @@ import { createHash } from "crypto";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "fs";
 import path from "path";
 
-const CACHE_DIR = process.env.OG_CACHE_DIR || path.join(process.cwd(), "cache", "og-images");
+const CACHE_DIR = process.env.OG_CACHE_DIR || path.join(/* turbopackIgnore: true */ process.cwd(), "cache", "og-images");
 
 function ensureCacheDir() {
     if (!existsSync(CACHE_DIR)) {
