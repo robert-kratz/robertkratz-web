@@ -244,8 +244,8 @@ export default function DatenschutzClient() {
                 </P>
                 <P>
                     {de
-                        ? "Unser Hoster ist: netcup GmbH, Daimlerstraße 25, 76185 Karlsruhe. Wir haben einen Vertrag über Auftragsverarbeitung (AVV) mit netcup geschlossen."
-                        : "Our hoster is: netcup GmbH, Daimlerstraße 25, 76185 Karlsruhe. We have concluded a data processing agreement (DPA) with netcup."}
+                        ? "Unser Hoster ist: netcup GmbH, Emmy-Noether-Straße 10, D-76131 Karlsruhe. Wir haben einen Vertrag über Auftragsverarbeitung (AVV) mit netcup geschlossen."
+                        : "Our hoster is: netcup GmbH, Emmy-Noether-Straße 10, D-76131 Karlsruhe. We have concluded a data processing agreement (DPA) with netcup."}
                 </P>
 
                 <SubHeading>Cloudflare</SubHeading>
@@ -289,8 +289,8 @@ export default function DatenschutzClient() {
 
                 <SubHeading>
                     {de
-                        ? "Kontaktformular & E-Mail-Versand (SignalTransmitter)"
-                        : "Contact Form & Email Delivery (SignalTransmitter)"}
+                        ? "Kontaktformular & E-Mail-Versand (NUXOA GmbH)"
+                        : "Contact Form & Email Delivery (NUXOA GmbH)"}
                 </SubHeading>
                 <P>
                     {de
@@ -304,8 +304,8 @@ export default function DatenschutzClient() {
                 </P>
                 <P>
                     {de
-                        ? "Für den technischen Versand der E-Mails aus unserem System nutzen wir den Dienstleister SignalTransmitter (SignalTransmitter GmbH). Mit diesem Anbieter wurde ein Vertrag zur Auftragsverarbeitung geschlossen."
-                        : "For the technical delivery of emails from our system, we use the service provider SignalTransmitter (SignalTransmitter GmbH). A data processing agreement has been concluded with this provider."}
+                        ? "Für den technischen Versand der E-Mails aus unserem System nutzen wir den Dienstleister NUXOA GmbH, Hauptstraße 20a, 82216 Maisach, Deutschland (ehemals SignalTransmitter GmbH). Mit diesem Anbieter wurde ein Vertrag zur Auftragsverarbeitung geschlossen."
+                        : "For the technical delivery of emails from our system, we use the service provider NUXOA GmbH, Hauptstraße 20a, 82216 Maisach, Germany (formerly SignalTransmitter GmbH). A data processing agreement has been concluded with this provider."}
                 </P>
             </SectionBlock>
 

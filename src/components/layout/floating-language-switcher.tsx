@@ -2,7 +2,6 @@
 
 import { useLocale } from "next-intl";
 import { useRouter, usePathname } from "next/navigation";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { useAnalytics } from "@/lib/analytics";
 
@@ -31,7 +30,7 @@ export function FloatingLanguageSwitcher() {
             className="fixed bottom-6 right-6 z-40 p-2 rounded-lg retro-card transition-all duration-300 hover:retro-glow"
             aria-label={`Switch to ${targetLabel}`}
         >
-            <Image src={targetFlag} alt={targetLabel} width={24} height={24} style={{ width: "24px", height: "auto" }} />
+            <img src={targetFlag} alt={targetLabel} width={24} height={24} />
         </motion.button>
     );
 }

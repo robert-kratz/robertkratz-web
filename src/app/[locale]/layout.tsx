@@ -86,7 +86,7 @@ export default async function LocaleLayout({
                         <SideNavigation />
                         <FloatingLanguageSwitcher />
                         <FullscreenMenu />
-                        <main>{children}</main>
+                        <main className="relative">{children}</main>
                         <CookieBanner />
                     </PageNavigationProvider>
                 </AnalyticsProvider>

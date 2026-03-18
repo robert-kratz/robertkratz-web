@@ -14,6 +14,7 @@ const sectionsDe = [
     { id: "imprint-info", label: "Angaben" },
     { id: "imprint-contact", label: "Kontakt" },
     { id: "imprint-responsible", label: "Verantwortlich" },
+    { id: "imprint-hosting", label: "Hosting" },
     { id: "imprint-liability-content", label: "Haftung Inhalte" },
     { id: "imprint-liability-links", label: "Haftung Links" },
     { id: "imprint-copyright", label: "Urheberrecht" },
@@ -24,6 +25,7 @@ const sectionsEn = [
     { id: "imprint-info", label: "Information" },
     { id: "imprint-contact", label: "Contact" },
     { id: "imprint-responsible", label: "Responsible" },
+    { id: "imprint-hosting", label: "Hosting" },
     { id: "imprint-liability-content", label: "Content Liability" },
     { id: "imprint-liability-links", label: "Link Liability" },
     { id: "imprint-copyright", label: "Copyright" },
@@ -201,6 +203,66 @@ export default function ImpressumClient() {
                             <br />
                             68165 Mannheim
                         </p>
+                    </motion.div>
+                </div>
+            </section>
+
+            {/* Hosting */}
+            <section id="imprint-hosting" className="py-16 md:py-24">
+                <div className="max-w-3xl mx-auto px-4 md:px-8">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="mb-8"
+                    >
+                        <span className="inline-block text-retro-orange font-mono text-sm tracking-widest uppercase mb-4">
+                            {"// "}
+                            {locale === "de" ? "Infrastruktur" : "Infrastructure"}
+                        </span>
+                        <h2 className="font-display font-bold text-2xl md:text-3xl tracking-tight">
+                            {locale === "de" ? "Hosting-Anbieter" : "Hosting Providers"}
+                        </h2>
+                    </motion.div>
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="retro-card rounded-xl p-8 md:p-12 space-y-6"
+                    >
+                        <div>
+                            <p className="text-foreground/80 leading-relaxed font-semibold mb-1">
+                                {locale === "de" ? "Webhosting" : "Web Hosting"}
+                            </p>
+                            <p className="text-foreground/80 leading-relaxed">
+                                netcup GmbH<br />
+                                Emmy-Noether-Straße 10<br />
+                                D-76131 Karlsruhe<br />
+                                {locale === "de" ? "Deutschland" : "Germany"}
+                                <br /><br />
+                                {locale === "de" ? "Telefon" : "Phone"}: +49 721 / 7540755 - 0<br />
+                                {locale === "de" ? "Telefax" : "Fax"}: +49 721 / 7540755 - 9<br />
+                                E-Mail: mail@netcup.de<br />
+                                Web: www.netcup.com<br />
+                                {locale === "de" ? "Handelsregister" : "Commercial Register"}: HRB 705547, Amtsgericht Mannheim
+                            </p>
+                        </div>
+                        <div>
+                            <p className="text-foreground/80 leading-relaxed font-semibold mb-1">
+                                {locale === "de" ? "E-Mail-Versand" : "Email Delivery"}
+                            </p>
+                            <p className="text-foreground/80 leading-relaxed">
+                                NUXOA GmbH<br />
+                                Hauptstraße 20a<br />
+                                82216 Maisach<br />
+                                {locale === "de" ? "Deutschland" : "Germany"}
+                                <br /><br />
+                                {locale === "de" ? "Geschäftsführung" : "Managing Directors"}: Maximilian Dallmair, Richard Reiber<br />
+                                {locale === "de" ? "Telefon" : "Phone"}: +49 8141 31589006<br />
+                                {locale === "de" ? "Telefax" : "Fax"}: +49 8141 31589001<br />
+                                E-Mail: info@st-hosting.com
+                            </p>
+                        </div>
                     </motion.div>
                 </div>
             </section>

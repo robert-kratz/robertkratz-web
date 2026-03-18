@@ -165,8 +165,11 @@ export function GoogleAnalyticsScript() {
     return (
         <>
             <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} strategy="lazyOnload" />
-            <Script id="gtag-init" strategy="lazyOnload">
-                {`
+            <Script
+                id="gtag-init"
+                strategy="lazyOnload"
+                dangerouslySetInnerHTML={{
+                    __html: `
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           
@@ -184,8 +187,9 @@ export function GoogleAnalyticsScript() {
             anonymize_ip: true,
             cookie_flags: 'SameSite=None;Secure'
           });
-        `}
-            </Script>
+        `,
+                }}
+            />
         </>
     );
 }

@@ -155,25 +155,39 @@ export async function POST(request: Request) {
             const adminEmail = process.env.CONTACT_EMAIL || "contact@rjks.us";
 
             // Send admin notification
-            const adminHtml = loadTemplate("admin_contact_email", templateData);
-            await transporter.sendMail({
-                from: fromEmail,
-                to: adminEmail,
-                subject: `Neue Kontaktanfrage: ${templateData.projectType} - ${templateData.name}`,
-                html: adminHtml,
-            });
+            try {
+                const adminHtml = loadTemplate("admin_contact_email", templateData);
+                console.log(`[Contact] Sending admin email to: ${adminEmail}`);
+                await transporter.sendMail({
+                    from: fromEmail,
+                    to: adminEmail,
+                    replyTo: email,
+                    subject: `New Contact Form Submission from ${name}`,
+                    html: adminHtml,
+                });
+                console.log(`[Contact] Admin email sent successfully to: ${adminEmail}`);
+            } catch (adminError) {
+                console.error(`[Contact] Failed to send admin email to ${adminEmail}:`, adminError);
+            }
 
             // Send customer confirmation
-            const customerTemplateName = locale === "de" ? "customer_contact_email_de" : "customer_contact_email_en";
-            const customerHtml = loadTemplate(customerTemplateName, templateData);
-            await transporter.sendMail({
-                from: fromEmail,
-                to: email,
-                subject: locale === "de" ? "Danke für Ihre Nachricht" : "Thank you for your message",
-                html: customerHtml,
-            });
+            try {
+                const customerTemplateName = locale === "de" ? "customer_contact_email_de" : "customer_contact_email_en";
+                const customerHtml = loadTemplate(customerTemplateName, templateData);
+                console.log(`[Contact] Sending customer email to: ${email}`);
+                await transporter.sendMail({
+                    from: fromEmail,
+                    to: email,
+                    replyTo: adminEmail,
+                    subject: locale === "de" ? "Danke für Ihre Nachricht" : "Thank you for your message",
+                    html: customerHtml,
+                });
+                console.log(`[Contact] Customer email sent successfully to: ${email}`);
+            } catch (customerError) {
+                console.error(`[Contact] Failed to send customer email to ${email}:`, customerError);
+            }
         } else {
-            console.log("Contact form submission (SMTP not configured):", { name, email, projectType });
+            console.log("[Contact] SMTP not configured. Submission:", { name, email, projectType });
         }
 
         return NextResponse.json({ success: true });

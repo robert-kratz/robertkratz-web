@@ -96,7 +96,7 @@ export default async function RootLayout({
 }>) {
     const { locale } = await params;
     return (
-        <html lang={locale || "de"} suppressHydrationWarning>
+        <html lang={locale || "de"} data-scroll-behavior="smooth" suppressHydrationWarning>
             <head>
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
                 <link rel="preconnect" href="https://www.google.com" />
