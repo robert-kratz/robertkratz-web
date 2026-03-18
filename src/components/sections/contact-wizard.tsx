@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useRef, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
 import { GoogleReCaptchaProvider, useGoogleReCaptcha } from "react-google-recaptcha-v3";
@@ -53,6 +53,11 @@ function ContactWizardInner() {
     });
     const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
     const { executeRecaptcha } = useGoogleReCaptcha();
+    const prevStepRef = useRef(0);
+
+    useEffect(() => {
+        prevStepRef.current = step;
+    }, [step]);
 
     const steps = ["projectType", "details", "message"] as const;
 
@@ -146,7 +151,15 @@ function ContactWizardInner() {
                                                     ? "50%"
                                                     : "0%",
                                     }}
-                                    transition={{ duration: 0.4 }}
+                                    transition={{
+                                        duration: 0.4,
+                                        delay: (() => {
+                                            const prev = prevStepRef.current;
+                                            if (step > prev && i === step) return 0.35;
+                                            if (step < prev && i === step) return 0.35;
+                                            return 0;
+                                        })(),
+                                    }}
                                 />
                             </div>
                             {i < steps.length - 1 && (
