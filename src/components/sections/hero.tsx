@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { ParallaxWrapper } from "@/components/effects/parallax-wrapper";
 import { MagneticButton } from "@/components/effects/magnetic-button";
 import { SocialLinks } from "@/components/shared/social-links";
@@ -110,10 +111,14 @@ export function HeroSection() {
                                     {/* Brushed aluminum background with placeholder */}
                                     <div className="w-full h-full brushed-metal flex items-center justify-center">
                                         <div className="w-48 h-48 rounded-full overflow-hidden border-2 border-border">
-                                            <img
+                                            <Image
                                                 src="/robert-kratz-avatar.png"
                                                 alt="Robert Julian Kratz"
+                                                width={192}
+                                                height={192}
+                                                sizes="192px"
                                                 className="w-full h-full object-cover"
+                                                priority
                                             />
                                         </div>
                                     </div>

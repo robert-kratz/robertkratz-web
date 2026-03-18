@@ -7,39 +7,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import { SectionWrapper } from "@/components/shared/section-wrapper";
 import { TiltCard } from "@/components/effects/tilt-card";
 import Link from "next/link";
-
-// Placeholder blog posts
-const blogPosts = [
-    {
-        slug: "nextjs-server-components",
-        title: "Server Components in Next.js meistern",
-        titleEn: "Mastering Server Components in Next.js",
-        excerpt:
-            "Ein tiefer Einblick in die Welt der React Server Components und wie sie die Webentwicklung verändern.",
-        excerptEn: "A deep dive into the world of React Server Components and how they're changing web development.",
-        date: "2026-03-01",
-        category: "Development",
-    },
-    {
-        slug: "ki-fuer-kmu",
-        title: "KI-Strategien für kleine Unternehmen",
-        titleEn: "AI Strategies for Small Businesses",
-        excerpt:
-            "Wie kleine und mittlere Unternehmen von künstlicher Intelligenz profitieren können, ohne das Budget zu sprengen.",
-        excerptEn: "How small and medium businesses can benefit from AI without breaking the budget.",
-        date: "2026-02-15",
-        category: "Strategy",
-    },
-    {
-        slug: "cloud-security-basics",
-        title: "Cloud-Sicherheit: Die Grundlagen",
-        titleEn: "Cloud Security: The Basics",
-        excerpt: "Essenzielle Sicherheitspraktiken für Cloud-Infrastrukturen, die jedes Unternehmen kennen sollte.",
-        excerptEn: "Essential security practices for cloud infrastructure that every business should know.",
-        date: "2026-01-20",
-        category: "Security",
-    },
-];
+import { blogPosts } from "@/data/blog-posts";
 
 export function BlogCarousel() {
     const t = useTranslations("blog");
@@ -100,6 +68,7 @@ export function BlogCarousel() {
                         onClick={() => emblaApi?.scrollPrev()}
                         disabled={!canScrollPrev}
                         className="px-3 py-2 rounded-lg retro-card text-muted-foreground hover:text-primary disabled:opacity-30 transition-all font-mono text-sm"
+                        aria-label="Previous blog post"
                     >
                         ←
                     </button>
@@ -107,6 +76,7 @@ export function BlogCarousel() {
                         onClick={() => emblaApi?.scrollNext()}
                         disabled={!canScrollNext}
                         className="px-3 py-2 rounded-lg retro-card text-muted-foreground hover:text-primary disabled:opacity-30 transition-all font-mono text-sm"
+                        aria-label="Next blog post"
                     >
                         →
                     </button>

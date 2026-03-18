@@ -18,6 +18,7 @@ import {
 import { SectionWrapper } from "@/components/shared/section-wrapper";
 import { MagneticButton } from "@/components/effects/magnetic-button";
 import { useAnalytics } from "@/lib/analytics";
+import { useLocale } from "next-intl";
 
 const projectTypeIcons = {
     web: Globe,
@@ -40,6 +41,7 @@ export function ContactWizard() {
 function ContactWizardInner() {
     const t = useTranslations("contact");
     const { trackEvent } = useAnalytics();
+    const locale = useLocale();
     const [step, setStep] = useState(0);
     const [projectType, setProjectType] = useState<ProjectType | null>(null);
     const [formData, setFormData] = useState({
@@ -75,7 +77,7 @@ function ContactWizardInner() {
             const res = await fetch("/api/contact", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ ...formData, projectType, recaptchaToken }),
+                body: JSON.stringify({ ...formData, projectType, recaptchaToken, locale }),
             });
 
             if (res.ok) {
@@ -159,11 +161,11 @@ function ContactWizardInner() {
                 </div>
 
                 {/* Step Labels */}
-                <div className="flex justify-between mb-8">
+                <div className="flex mb-8">
                     {steps.map((s, i) => (
                         <span
                             key={s}
-                            className={`text-xs font-mono tracking-wider transition-colors ${
+                            className={`flex-1 text-center text-xs font-mono tracking-wider transition-colors ${
                                 status === "success" || i <= step ? "text-primary" : "text-muted-foreground"
                             }`}
                         >
@@ -204,16 +206,23 @@ function ContactWizardInner() {
                                                 setProjectType(type);
                                                 trackEvent({ name: "wizard_project_type", params: { type } });
                                             }}
-                                            className={`retro-card rounded-xl p-5 flex flex-col items-center gap-3 transition-all duration-300 cursor-pointer ${
+                                            className="retro-card rounded-xl p-5 flex flex-col items-center gap-3 transition-all duration-300 cursor-pointer"
+                                            style={
                                                 projectType === type
-                                                    ? "border-primary/50 retro-glow"
-                                                    : "hover:border-primary/20"
-                                            }`}
+                                                    ? {
+                                                          border: "2px solid #4a9fe8",
+                                                          background: "rgba(74, 159, 232, 0.07)",
+                                                          boxShadow:
+                                                              "0 0 0 1px rgba(74, 159, 232, 0.25), 0 0 18px rgba(74, 159, 232, 0.3)",
+                                                          transform: "scale(1.03)",
+                                                      }
+                                                    : undefined
+                                            }
                                         >
                                             <Icon
                                                 size={28}
                                                 className={
-                                                    projectType === type ? "text-primary" : "text-muted-foreground"
+                                                    projectType === type ? "text-retro-blue" : "text-muted-foreground"
                                                 }
                                             />
                                             <span className="text-sm font-medium text-center">

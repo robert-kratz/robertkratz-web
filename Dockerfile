@@ -34,6 +34,10 @@ RUN addgroup --system --gid 1001 nodejs && \
 COPY --from=builder /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+COPY --from=builder /app/src/assets/fonts ./src/assets/fonts
+
+RUN mkdir -p /app/cache/og-images && chown nextjs:nodejs /app/cache/og-images
+VOLUME ["/app/cache/og-images"]
 
 USER nextjs
 

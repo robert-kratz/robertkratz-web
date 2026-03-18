@@ -11,7 +11,7 @@ const socialLinks = [
     },
     {
         name: "LinkedIn",
-        href: "https://linkedin.com/in/robert-kratz",
+        href: "https://www.linkedin.com/in/robert-julian-kratz-155829225/",
         icon: Linkedin,
     },
     {

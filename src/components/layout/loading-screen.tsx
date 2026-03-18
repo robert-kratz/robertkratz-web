@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 export function LoadingScreen() {
     const t = useTranslations("loading");
@@ -42,8 +43,8 @@ export function LoadingScreen() {
                         transition={{ duration: 0.5 }}
                         className="w-20 h-20 rounded-full overflow-hidden"
                     >
-                        <img src="/logo-dark.png" alt="RK" className="w-full h-full object-cover dark:block hidden" />
-                        <img src="/logo-light.png" alt="RK" className="w-full h-full object-cover dark:hidden block" />
+                        <Image src="/logo-dark.png" alt="Robert Julian Kratz" width={80} height={80} className="w-full h-full object-cover dark:block hidden" priority />
+                        <Image src="/logo-light.png" alt="Robert Julian Kratz" width={80} height={80} className="w-full h-full object-cover dark:hidden block" priority />
                     </motion.div>
 
                     {/* Retro Progress Bar */}

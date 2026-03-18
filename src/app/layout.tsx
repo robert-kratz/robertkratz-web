@@ -19,22 +19,81 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: "Robert Julian Kratz | Softwareentwicklung & IT-Beratung",
-    description:
-        "Freelance Softwareentwickler, spezialisiert auf Webanwendungen, IT-Infrastruktur und KI-Strategie für kleine und mittlere Unternehmen.",
     icons: {
-        icon: [{ url: "/logo-dark.png", type: "image/png" }],
-        apple: "/logo-dark.png",
+        icon: [
+            {
+                url: "/favicon-dark.ico",
+                type: "image/x-icon",
+                media: "(prefers-color-scheme: dark)",
+            },
+            {
+                url: "/favicon-light.ico",
+                type: "image/x-icon",
+                media: "(prefers-color-scheme: light)",
+            },
+            {
+                url: "/favicon-dark-32x32.png",
+                sizes: "32x32",
+                type: "image/png",
+                media: "(prefers-color-scheme: dark)",
+            },
+            {
+                url: "/favicon-light-32x32.png",
+                sizes: "32x32",
+                type: "image/png",
+                media: "(prefers-color-scheme: light)",
+            },
+            {
+                url: "/favicon-dark-16x16.png",
+                sizes: "16x16",
+                type: "image/png",
+                media: "(prefers-color-scheme: dark)",
+            },
+            {
+                url: "/favicon-light-16x16.png",
+                sizes: "16x16",
+                type: "image/png",
+                media: "(prefers-color-scheme: light)",
+            },
+            {
+                url: "/favicon-dark-96x96.png",
+                sizes: "96x96",
+                type: "image/png",
+                media: "(prefers-color-scheme: dark)",
+            },
+            {
+                url: "/favicon-light-96x96.png",
+                sizes: "96x96",
+                type: "image/png",
+                media: "(prefers-color-scheme: light)",
+            },
+        ],
+        apple: [
+            {
+                url: "/favicon-dark-180x180.png",
+                sizes: "180x180",
+                media: "(prefers-color-scheme: dark)",
+            },
+            {
+                url: "/favicon-light-180x180.png",
+                sizes: "180x180",
+                media: "(prefers-color-scheme: light)",
+            },
+        ],
     },
+    manifest: "/site-dark.webmanifest",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
     children,
+    params,
 }: Readonly<{
     children: React.ReactNode;
+    params: Promise<{ locale?: string }>;
 }>) {
+    const { locale } = await params;
     return (
-        <html lang="de" suppressHydrationWarning>
+        <html lang={locale || "de"} suppressHydrationWarning>
             <body
                 className={`${oswald.variable} ${inter.variable} ${geistMono.variable} font-sans antialiased noise-overlay`}
             >

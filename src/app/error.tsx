@@ -1,8 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Error({ reset }: { error: Error & { digest?: string }; reset: () => void }) {
+    const pathname = usePathname();
+    const isEn = pathname?.startsWith("/en");
+
     return (
         <div className="min-h-screen flex items-center justify-center px-4">
             <div className="relative text-center max-w-lg">
@@ -18,20 +22,24 @@ export default function Error({ reset }: { error: Error & { digest?: string }; r
 
                 <h1 className="font-display text-6xl md:text-8xl font-bold tracking-tight text-foreground mb-4">500</h1>
 
-                <p className="text-muted-foreground mb-8">Ein unerwarteter Fehler ist aufgetreten.</p>
+                <p className="text-muted-foreground mb-8">
+                    {isEn
+                        ? "An unexpected error has occurred."
+                        : "Ein unerwarteter Fehler ist aufgetreten."}
+                </p>
 
                 <div className="flex items-center justify-center gap-4">
                     <button
                         onClick={reset}
                         className="retro-button-3d px-6 py-3 text-sm font-bold text-primary-foreground rounded-md"
                     >
-                        Erneut versuchen
+                        {isEn ? "Try again" : "Erneut versuchen"}
                     </button>
                     <Link
-                        href="/"
+                        href={isEn ? "/en" : "/de"}
                         className="px-6 py-3 text-sm font-medium border border-border text-foreground rounded-md hover:bg-muted transition-colors"
                     >
-                        Startseite
+                        {isEn ? "Homepage" : "Startseite"}
                     </Link>
                 </div>
             </div>

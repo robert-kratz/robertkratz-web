@@ -4,6 +4,65 @@ import Handlebars from "handlebars";
 import { readFileSync } from "fs";
 import { join } from "path";
 
+// --- Rate limiting (in-memory, per IP) ---
+const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
+const RATE_LIMIT_WINDOW_MS = 15 * 60 * 1000; // 15 minutes
+const RATE_LIMIT_MAX = 5; // max 5 requests per window
+
+function cleanupRateLimitMap() {
+    const now = Date.now();
+    for (const [ip, entry] of rateLimitMap) {
+        if (now > entry.resetAt) {
+            rateLimitMap.delete(ip);
+        }
+    }
+}
+
+function isRateLimited(ip: string): boolean {
+    const now = Date.now();
+
+    // Periodically clean up expired entries
+    if (rateLimitMap.size > 1000) {
+        cleanupRateLimitMap();
+    }
+
+    const entry = rateLimitMap.get(ip);
+
+    if (!entry || now > entry.resetAt) {
+        rateLimitMap.set(ip, { count: 1, resetAt: now + RATE_LIMIT_WINDOW_MS });
+        return false;
+    }
+
+    entry.count++;
+    if (entry.count > RATE_LIMIT_MAX) {
+        return true;
+    }
+
+    return false;
+}
+
+// --- Input sanitization ---
+const MAX_NAME_LENGTH = 100;
+const MAX_EMAIL_LENGTH = 254;
+const MAX_COMPANY_LENGTH = 200;
+const MAX_MESSAGE_LENGTH = 5000;
+const MAX_BUDGET_LENGTH = 50;
+const MAX_PROJECT_TYPE_LENGTH = 50;
+
+function sanitizeInput(value: unknown, maxLength: number): string {
+    if (typeof value !== "string") return "";
+    return value.slice(0, maxLength).trim();
+}
+
+function escapeHtml(str: string): string {
+    return str
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#x27;");
+}
+
 function loadTemplate(name: string, data: Record<string, string>): string {
     const filePath = join(process.cwd(), "templates", `${name}.hbs`);
     const source = readFileSync(filePath, "utf-8");
@@ -25,7 +84,10 @@ function getTransporter() {
 
 async function verifyRecaptcha(token: string): Promise<boolean> {
     const secretKey = process.env.RECAPTCHA_SECRET_KEY;
-    if (!secretKey) return true;
+    if (!secretKey) {
+        console.warn("RECAPTCHA_SECRET_KEY not set — rejecting request in production.");
+        return process.env.NODE_ENV !== "production";
+    }
 
     const res = await fetch("https://www.google.com/recaptcha/api/siteverify", {
         method: "POST",
@@ -39,12 +101,29 @@ async function verifyRecaptcha(token: string): Promise<boolean> {
 
 export async function POST(request: Request) {
     try {
+        // Rate limiting
+        const clientIp = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
+        if (isRateLimited(clientIp)) {
+            return NextResponse.json(
+                { error: "Too many requests. Please try again later." },
+                { status: 429 },
+            );
+        }
+
         const body = await request.json();
-        const { name, email, company, message, budget, projectType, recaptchaToken } = body;
+        const { recaptchaToken } = body;
 
         if (!recaptchaToken || !(await verifyRecaptcha(recaptchaToken))) {
             return NextResponse.json({ error: "reCAPTCHA verification failed." }, { status: 403 });
         }
+
+        // Sanitize and validate inputs
+        const name = sanitizeInput(body.name, MAX_NAME_LENGTH);
+        const email = sanitizeInput(body.email, MAX_EMAIL_LENGTH);
+        const company = sanitizeInput(body.company, MAX_COMPANY_LENGTH);
+        const message = sanitizeInput(body.message, MAX_MESSAGE_LENGTH);
+        const budget = sanitizeInput(body.budget, MAX_BUDGET_LENGTH);
+        const projectType = sanitizeInput(body.projectType, MAX_PROJECT_TYPE_LENGTH);
 
         if (!name || !email || !message) {
             return NextResponse.json({ error: "Name, email, and message are required." }, { status: 400 });
@@ -55,20 +134,18 @@ export async function POST(request: Request) {
             return NextResponse.json({ error: "Invalid email address." }, { status: 400 });
         }
 
-        const locale = request.headers.get("accept-language")?.startsWith("de") ? "de" : "en";
-        const messageHtml = String(message).replace(/\n/g, "<br />");
+        const locale = sanitizeInput(body.locale, 2) === "de" ? "de" : "en";
 
+        // Escape HTML for all user inputs before passing to templates
         const templateData = {
-            name: String(name),
-            email: String(email),
-            company: company ? String(company) : "—",
-            projectType: projectType ? String(projectType) : "—",
-            budget: budget ? String(budget) : "—",
-            message: String(message),
-            messageHtml,
+            name: escapeHtml(name),
+            email: escapeHtml(email),
+            company: company ? escapeHtml(company) : "—",
+            projectType: projectType ? escapeHtml(projectType) : "—",
+            budget: budget ? escapeHtml(budget) : "—",
+            message: escapeHtml(message),
+            messageHtml: escapeHtml(message).replace(/\n/g, "<br />"),
             date: new Date().toLocaleString("de-DE", { timeZone: "Europe/Berlin" }),
-            ip: request.headers.get("x-forwarded-for") || "unknown",
-            userAgent: request.headers.get("user-agent") || "unknown",
             locale,
         };
 
@@ -82,7 +159,7 @@ export async function POST(request: Request) {
             await transporter.sendMail({
                 from: fromEmail,
                 to: adminEmail,
-                subject: `Neue Kontaktanfrage: ${projectType || "Allgemein"} - ${name}`,
+                subject: `Neue Kontaktanfrage: ${templateData.projectType} - ${templateData.name}`,
                 html: adminHtml,
             });
 
@@ -96,7 +173,7 @@ export async function POST(request: Request) {
                 html: customerHtml,
             });
         } else {
-            console.log("Contact form submission:", templateData);
+            console.log("Contact form submission (SMTP not configured):", { name, email, projectType });
         }
 
         return NextResponse.json({ success: true });

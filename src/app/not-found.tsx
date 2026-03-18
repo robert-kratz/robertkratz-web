@@ -1,8 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function NotFound() {
+    const pathname = usePathname();
+    const isEn = pathname?.startsWith("/en");
+
     return (
         <div className="min-h-screen flex items-center justify-center px-4">
             <div className="relative text-center max-w-lg">
@@ -19,13 +23,17 @@ export default function NotFound() {
 
                 <h1 className="font-display text-6xl md:text-8xl font-bold tracking-tight text-foreground mb-4">404</h1>
 
-                <p className="text-muted-foreground mb-8">Die gesuchte Seite existiert nicht oder wurde verschoben.</p>
+                <p className="text-muted-foreground mb-8">
+                    {isEn
+                        ? "The page you are looking for does not exist or has been moved."
+                        : "Die gesuchte Seite existiert nicht oder wurde verschoben."}
+                </p>
 
                 <Link
-                    href="/"
+                    href={isEn ? "/en" : "/de"}
                     className="retro-button-3d inline-block px-6 py-3 text-sm font-bold text-primary-foreground rounded-md"
                 >
-                    Zurück zur Startseite
+                    {isEn ? "Back to homepage" : "Zurück zur Startseite"}
                 </Link>
             </div>
         </div>

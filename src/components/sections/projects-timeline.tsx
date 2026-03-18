@@ -6,6 +6,7 @@ import { ExternalLink, Github, Briefcase, Users } from "lucide-react";
 import { SectionWrapper } from "@/components/shared/section-wrapper";
 import { TiltCard } from "@/components/effects/tilt-card";
 import Link from "next/link";
+import Image from "next/image";
 
 type TimelineEntry =
     | {
@@ -352,11 +353,13 @@ export function ProjectsTimeline() {
                                             <>
                                                 {/* Project card */}
                                                 {entry.image ? (
-                                                    <div className="w-full h-40 rounded-lg bg-muted mb-4 overflow-hidden">
-                                                        <img
+                                                    <div className="w-full h-40 rounded-lg bg-muted mb-4 overflow-hidden relative">
+                                                        <Image
                                                             src={entry.image}
                                                             alt={title}
-                                                            className="w-full h-full object-cover"
+                                                            fill
+                                                            sizes="(max-width: 768px) 100vw, 400px"
+                                                            className="object-cover"
                                                         />
                                                     </div>
                                                 ) : null}

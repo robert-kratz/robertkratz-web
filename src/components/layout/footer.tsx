@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { SocialLinks } from "@/components/shared/social-links";
 import { useLocale } from "next-intl";
 import Link from "next/link";
+import Image from "next/image";
 import { Github } from "lucide-react";
 import { useAnalytics } from "@/lib/analytics";
 
@@ -20,14 +21,18 @@ export function Footer() {
                     {/* Logo / Brand */}
                     <div className="flex items-center gap-3">
                         <div className="w-8 h-8 rounded-full overflow-hidden">
-                            <img
+                            <Image
                                 src="/logo-dark.png"
                                 alt="Robert Julian Kratz"
+                                width={32}
+                                height={32}
                                 className="w-full h-full object-cover dark:block hidden"
                             />
-                            <img
+                            <Image
                                 src="/logo-light.png"
                                 alt="Robert Julian Kratz"
+                                width={32}
+                                height={32}
                                 className="w-full h-full object-cover dark:hidden block"
                             />
                         </div>

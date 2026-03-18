@@ -9,7 +9,7 @@ import Link from "next/link";
 import { GAEvent, ConsentSettings, GtagConsentUpdate } from "@/lib/analytics-types";
 import { Switch } from "@/components/ui/switch";
 
-const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-1VP6CHSC2R";
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "";
 const CONSENT_STORAGE_KEY = "cookie_consent_settings";
 
 // --- CONTEXT INTERFACE ---
