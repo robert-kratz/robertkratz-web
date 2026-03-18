@@ -206,7 +206,7 @@
 /* Orange Accent 3D Button */
 .retro-button-accent {
   background: linear-gradient(180deg, var(--retro-orange), color-mix(in srgb, var(--retro-orange) 75%, black 25%));
-  color: #0a0a0f;
+  color: #ffffff;
   box-shadow:
     0 4px 6px -1px rgba(13, 148, 136, 0.4),
     0 2px 4px -2px rgba(13, 148, 136, 0.3),

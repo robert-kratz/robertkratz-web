@@ -6,16 +6,19 @@ const oswald = Oswald({
     variable: "--font-display",
     subsets: ["latin"],
     weight: ["400", "500", "600", "700"],
+    display: "swap",
 });
 
 const inter = Inter({
     variable: "--font-sans",
     subsets: ["latin"],
+    display: "swap",
 });
 
 const geistMono = Geist_Mono({
     variable: "--font-geist-mono",
     subsets: ["latin"],
+    display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -94,6 +97,11 @@ export default async function RootLayout({
     const { locale } = await params;
     return (
         <html lang={locale || "de"} suppressHydrationWarning>
+            <head>
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+                <link rel="preconnect" href="https://www.google.com" />
+                <link rel="preconnect" href="https://www.gstatic.com" />
+            </head>
             <body
                 className={`${oswald.variable} ${inter.variable} ${geistMono.variable} font-sans antialiased noise-overlay`}
             >

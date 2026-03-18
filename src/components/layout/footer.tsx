@@ -43,7 +43,7 @@ export function Footer() {
                     <SocialLinks />
 
                     {/* Legal */}
-                    <div className="flex items-center gap-6 text-sm text-muted-foreground">
+                    <div className="flex items-center gap-6 text-sm text-foreground/70">
                         <Link href={`/${locale}/impressum`} className="hover:text-primary transition-colors">
                             {t("imprint")}
                         </Link>
@@ -58,15 +58,15 @@ export function Footer() {
                         href="https://github.com/robert-kratz/robertkratz-web"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-xs text-muted-foreground hover:text-primary transition-colors"
+                        className="inline-flex items-center gap-2 text-xs text-foreground/60 hover:text-primary transition-colors"
                     >
                         <Github size={14} />
                         {t("openSource")}
                     </a>
-                    <span className="text-xs text-muted-foreground">
+                    <span className="text-xs text-foreground/60">
                         © {year} Robert Julian Kratz. {t("copyright")}
                     </span>
-                    <div className="flex items-center gap-3 mt-1 text-xs text-muted-foreground/60">
+                    <div className="flex items-center gap-3 mt-1 text-xs text-foreground/50">
                         <span>
                             {t("madeWith")}{" "}
                             <a
@@ -87,7 +87,7 @@ export function Footer() {
                                 @gil
                             </a>
                         </span>
-                        <span className="text-muted-foreground/30">·</span>
+                        <span className="text-foreground/30">·</span>
                         <button onClick={resetConsent} className="hover:text-primary transition-colors">
                             {t("cookieSettings")}
                         </button>

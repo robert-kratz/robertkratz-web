@@ -79,7 +79,7 @@ export function HeroSection() {
                             <MagneticButton>
                                 <button
                                     onClick={scrollToServices}
-                                    className="px-6 py-3 rounded-lg font-display font-medium tracking-wider text-sm border border-border bg-background text-muted-foreground hover:text-foreground hover:border-primary/70 hover:bg-primary/[0.05] transition-all duration-300"
+                                    className="px-6 py-3 rounded-lg font-display font-medium tracking-wider text-sm border border-border bg-background text-foreground/70 hover:text-foreground hover:border-primary/70 hover:bg-primary/[0.05] transition-all duration-300"
                                 >
                                     {t("ctaSecondary")}
                                 </button>

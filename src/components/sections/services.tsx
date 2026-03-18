@@ -55,7 +55,11 @@ export function ServicesSection() {
                     >
                         <TiltCard className="h-full" tiltAmount={5}>
                             <div className="retro-card rounded-xl p-6 h-full group cursor-default transition-all duration-300 hover:border-primary/50 hover:bg-primary/[0.03] hover:-translate-y-1">
-                                <span className="font-display text-5xl font-bold text-primary/30 group-hover:text-primary/50 transition-colors duration-300 block mb-4">
+                                <span className={`font-display text-5xl font-bold block mb-4 transition-colors duration-300 ${
+                                    service.number === "01"
+                                        ? "text-retro-orange group-hover:text-retro-orange"
+                                        : "text-primary/30 group-hover:text-primary/50"
+                                }`}>
                                     {service.number}
                                 </span>
                                 <h3 className="font-display font-semibold text-lg mb-2 tracking-wide">
