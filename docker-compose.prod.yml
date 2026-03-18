@@ -1,14 +1,16 @@
 services:
   web:
-    image: ghcr.io/robert-kratz/robertkratz-web:latest
+    image: 'ghcr.io/robert-kratz/robertkratz-web:latest'
     restart: unless-stopped
-    ports:
-      - "3000:3000"
+    expose:
+      - '3000' # Replaced "ports" with "expose"
+    labels:
+      - traefik.http.services.${COOLIFY_CONTAINER_NAME:-web}.loadbalancer.server.port=3000
     volumes:
-      - og-cache:/app/cache/og-images
+      - 'og-cache:/app/cache/og-images'
     environment:
       NODE_ENV: production
-      PORT: "3000"
+      PORT: '3000'
       HOSTNAME: "0.0.0.0"
       # SMTP
       SMTP_HOST: ${SMTP_HOST}
