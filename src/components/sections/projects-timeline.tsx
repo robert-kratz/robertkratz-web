@@ -21,6 +21,8 @@ type TimelineEntry =
           image: string | null;
           liveUrl: string | null;
           repoUrl: string | null;
+          label?: string;
+          labelEn?: string;
       }
     | {
           type: "client";
@@ -58,9 +60,9 @@ const timelineEntries: TimelineEntry[] = [
         title: "Leitender Softwareentwickler E-Learning",
         titleEn: "Lead Software Developer E-Learning",
         description:
-            "Leitender Softwareentwickler im Bereich E-Learning am Lehrstuhl für Software Engineering bei Prof. Dr. Colin Atkinson an der Universität Mannheim.",
+            "Leitender Softwareentwickler im Bereich E-Learning am Lehrstuhl für Software Engineering bei Prof. Dr. Colin Atkinson an der Universität Mannheim. Dabei unterstütze ich Studierende bei der praktischen Umsetzung ihrer Masterarbeiten.",
         descriptionEn:
-            "Lead software developer in E-Learning at the Chair of Software Engineering under Prof. Dr. Colin Atkinson at the University of Mannheim.",
+            "Lead software developer in E-Learning at the Chair of Software Engineering under Prof. Dr. Colin Atkinson at the University of Mannheim. I also support students in the practical implementation of their master's theses.",
         date: "2026-01",
         dateEnd: "2026-12",
         company: "Universität Mannheim",
@@ -72,9 +74,9 @@ const timelineEntries: TimelineEntry[] = [
         title: "Kanzlei Jaeger – Web Strategie",
         titleEn: "Kanzlei Jaeger – Web Strategy",
         description:
-            "Website und Web-Strategie für die Kanzlei Jaeger, Rechtsanwalt Lothar Jaeger | Ehem. Vors. Richter am OLG Köln.",
+            "Website und Web-Strategie für die Kanzlei Jaeger, Rechtsanwalt Lothar Jaeger, Ehem. Vors. Richter am OLG Köln.",
         descriptionEn:
-            "Website and web strategy for Kanzlei Jaeger, Attorney Lothar Jaeger | Former Presiding Judge at the Higher Regional Court of Cologne.",
+            "Website and web strategy for Kanzlei Jaeger, Attorney Lothar Jaeger, Former Presiding Judge at the Higher Regional Court of Cologne.",
         date: "2025-12",
         client: "Kanzlei Jaeger",
         tags: ["Next.js", "TypeScript", "CI/CD", "Strategy"],
@@ -84,12 +86,26 @@ const timelineEntries: TimelineEntry[] = [
     },
     {
         type: "employment" as const,
+        slug: "uni-mannheim-tutor",
+        title: "Tutor – Praktische Softwareentwicklung",
+        titleEn: "Tutor – Practical Software Engineering",
+        description:
+            "Tutor im Kurs \"Praktische Softwareentwicklung\" bei Prof. Dr. Colin Atkinson an der Universität Mannheim. Betreuung von über 20 Studierenden über einen Zeitraum von 3 Monaten.",
+        descriptionEn:
+            "Tutor for the course \"Practical Software Engineering\" under Prof. Dr. Colin Atkinson at the University of Mannheim. Supervised more than 20 students over a period of 3 months.",
+        date: "2024-05",
+        dateEnd: "2024-07",
+        company: "Universität Mannheim",
+        tags: ["Teaching", "Software Engineering", "Mentoring"],
+    },
+    {
+        type: "employment" as const,
         slug: "freelance-start",
         title: "Freiberuflicher Softwareentwickler",
         titleEn: "Freelance Software Developer",
         description: "Beratung und Entwicklung von Webanwendungen für kleine und mittlere Unternehmen.",
         descriptionEn: "Consulting and development of web applications for small and medium businesses.",
-        date: "2025-01",
+        date: "2022-12",
         company: "Selbstständig",
         tags: ["Next.js", "React", "Node.js"],
     },
@@ -112,6 +128,8 @@ const timelineEntries: TimelineEntry[] = [
         slug: "bib-tracker",
         title: "Bibliotheks-Tracker Uni Mannheim",
         titleEn: "Library Tracker University of Mannheim",
+        label: "Hobbyprojekt · Universität Mannheim",
+        labelEn: "Hobby Project · University of Mannheim",
         description:
             "Live-Tracking der Bibliotheksauslastung der Uni Mannheim mit akkuraten Vorhersagen. Verfügbar als PWA.",
         descriptionEn:
@@ -143,6 +161,8 @@ const timelineEntries: TimelineEntry[] = [
         slug: "fcg-stundenplan",
         title: "FCG-Stundenplan App",
         titleEn: "FCG Timetable App",
+        label: "Hobbyprojekt · Abschlussarbeit",
+        labelEn: "Hobby Project · Graduation Project",
         description:
             "Stundenplan-App für iOS und Android mit durchschnittlich 150 täglichen Nutzern. Eigenständig entwickeltes Abitur-Abschlussprojekt.",
         descriptionEn:
@@ -352,6 +372,13 @@ export function ProjectsTimeline() {
                                         ) : (
                                             <>
                                                 {/* Project card */}
+                                                {entry.label || entry.labelEn ? (
+                                                    <div className="flex items-center gap-2 mb-3">
+                                                        <span className="text-xs font-mono text-primary/70 uppercase tracking-wider">
+                                                            {locale === "en" ? (entry.labelEn ?? entry.label) : entry.label}
+                                                        </span>
+                                                    </div>
+                                                ) : null}
                                                 {entry.image ? (
                                                     <div className="w-full h-40 rounded-lg bg-muted mb-4 overflow-hidden relative">
                                                         <Image

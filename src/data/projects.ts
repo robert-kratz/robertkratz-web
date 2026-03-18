@@ -20,9 +20,9 @@ export const projects: Project[] = [
         title: "Kanzlei Jaeger – Web Strategie",
         titleEn: "Kanzlei Jaeger – Web Strategy",
         description:
-            "Website und Web-Strategie für die Kanzlei Jaeger, Rechtsanwalt Lothar Jaeger | Ehem. Vors. Richter am OLG Köln.",
+            "Website und Web-Strategie für die Kanzlei Jaeger, Rechtsanwalt Lothar Jaeger, Ehem. Vors. Richter am OLG Köln.",
         descriptionEn:
-            "Website and web strategy for Kanzlei Jaeger, Attorney Lothar Jaeger | Former Presiding Judge at the Higher Regional Court of Cologne.",
+            "Website and web strategy for Kanzlei Jaeger, Attorney Lothar Jaeger, Former Presiding Judge at the Higher Regional Court of Cologne.",
         content: {
             de: `Für die Kanzlei Jaeger wurde eine professionelle Webpräsenz und digitale Strategie entwickelt. Rechtsanwalt Lothar Jaeger, ehemaliger Vorsitzender Richter am OLG Köln, ist spezialisiert auf Schmerzensgeld- und Arzthaftungsrecht.
 
